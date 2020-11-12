@@ -8,7 +8,7 @@ export default class Header extends Component{
    constructor() {
       super();
       this.state = { 
-         loginModalVisible:false,
+         loginModalVisible:true,
          registerModalVisible : false,
          isAuthenticated: false, user: null, token: ''};
 
@@ -133,7 +133,7 @@ export default class Header extends Component{
               </> :<><h4>Not Authenticated</h4>
 
             <li>
-            <button class="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
+            <button className="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
           </li>
           <li>
           <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
