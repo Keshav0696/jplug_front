@@ -33,7 +33,7 @@ export default class Header extends Component{
    const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
    const options = {
        method: 'POST',
-       body: tokenBlob,
+       body: {access_token: response.accessToken},
       //  mode: 'cors',
       //  cache: 'default'
    };
@@ -64,7 +64,7 @@ export default class Header extends Component{
       const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
       const options = {
           method: 'POST',
-          body: tokenBlob,
+          body: {access_token: response.accessToken},
          //  mode: 'cors',
          //  cache: 'default'
       };
