@@ -1,16 +1,55 @@
 import React, { Component }from 'react';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-
+import TwitterLogin from 'react-twitter-auth';
+import { GoogleLogin } from 'react-google-login';
+import config from '../config.json';
+import axios from 'axios';
 export default class Header extends Component{
-   constructor () {
-     super()
-     this.state = {
-      loginModalVisible:false,
-      registerModalVisible : false
-     }
+   constructor() {
+      super();
+      this.state = { 
+         loginModalVisible:false,
+         registerModalVisible : false,
+         isAuthenticated: false, user: null, token: ''};
+
      this.openLoginModal = this.openLoginModal.bind(this);
      this.openRegisterModal = this.openRegisterModal.bind(this);
-   }
+  }
+
+  logout = () => {
+      this.setState({isAuthenticated: false, token: '', user: null})
+  };
+  
+  twitterResponse = (response) => {
+   const token = response.headers.get('x-auth-token');
+   response.json().then(user => {
+       if (token) {
+           this.setState({isAuthenticated: true, user, token});
+       }
+   });
+  };
+
+  googleResponse = (response) => {
+   const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
+   const options = {
+       method: 'POST',
+       body: tokenBlob,
+       mode: 'cors',
+       cache: 'default'
+   };
+   fetch('http://localhost:3400/api/auth/google', options).then(r => {
+       const token = r.headers.get('x-auth-token');
+       r.json().then(user => {
+           if (token) {
+               this.setState({isAuthenticated: true, user, token})
+           }
+       });
+   })
+   
+  };
+  onFailure = (error) => {
+    alert(error);
+  }
 
    openLoginModal() {
       const loginModalVisible = !this.state.loginModalVisible;
@@ -20,7 +59,21 @@ export default class Header extends Component{
     }
 
     responseFacebook(response){
-      console.log(response);
+      const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
+      const options = {
+          method: 'POST',
+          body: tokenBlob,
+          mode: 'cors',
+          cache: 'default'
+      };
+      fetch('http://localhost:3400/api/auth/facebook', options).then(r => {
+          const token = r.headers.get('x-auth-token');
+          r.json().then(user => {
+              if (token) {
+                  this.setState({isAuthenticated: true, user, token})
+              }
+          });
+      })
     }
 
 
@@ -110,20 +163,26 @@ export default class Header extends Component{
                              <span className="span-or text-center" style="display: block;" >or</span>
                           </div>
                        </div> */}
-                       <div className="col-md-2 mb-3"></div>
                        <div className="col-md-4 mb-3">
-                          <p className="text-center">
-                             <a href="/#" className="google btn mybtn"><i className="fa fa-google-plus">
+                          <p className="text-center googlebtn">
+                          <GoogleLogin
+                              clientId={config.GOOGLE_CLIENT_ID}
+                              onSuccess={this.googleResponse}
+                              onFailure={this.googleResponse}
+                           >
+                             <a  className="google btn mybtn"><i className="fa fa-google-plus">
                              </i> Signup using Google
                              </a>
+                           </GoogleLogin>
                           </p>
                        </div>
+
 
                        <div className="col-md-4 mb-3">
                           <p className="text-center">
 
                               <FacebookLogin
-                              appId="805856186862870"
+                               appId={config.FACEBOOK_APP_ID}
                               autoLoad
                               callback={this.responseFacebook.bind(this)}
                               render={renderProps => (
@@ -133,6 +192,22 @@ export default class Header extends Component{
                                )}
                               />
                        </p>
+                       </div>
+
+
+                       <div className="col-md-4 mb-3">
+                          <p className="text-center twitre">
+                          <TwitterLogin
+                              loginUrl="http://localhost:3400/api/auth/twitter"
+                              onFailure={this.twitterResponse}
+                              onSuccess={this.twitterResponse}
+                              requestTokenUrl="http://localhost:3400/api/auth/twitter/reverse"
+                              >
+                        <a className="google btn mybtn"><i className="fa fa-twitter">
+                             </i> Signup using Twitter
+                             </a>
+                              </TwitterLogin>
+                          </p>
                        </div>
                        <div className="col-md-2 mb-3"></div>
 

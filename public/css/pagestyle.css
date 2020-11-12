@@ -451,3 +451,9 @@ ul.topsrch li .input-group ,
     background: transparent;
     border: 0 none;
 }
+
+.googlebtn button {background-color: rgb(255, 255, 255);  display: inline-flex; align-items: center; color: rgba(0, 0, 0, 0.54);  box-shadow:  none !important; padding: 0px; border-radius: 2px; border: 1px solid transparent; font-size: 14px;  font-weight: 500; font-family: Roboto, sans-serif;}
+.googlebtn button div {display: none;}
+.googlebtn button span {padding: 0 !important;}
+.twitre button {padding: 0; border: 0 none;  background: transparent;}
+.twitre button a { padding: 4px 0 0 0;}
