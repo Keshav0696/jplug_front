@@ -39,6 +39,8 @@ export default class Header extends Component{
    };
    fetch('https://jplug.herokuapp.com/api/auth/google', options).then(r => {
        const token = r.headers.get('x-auth-token');
+       this.setState({isAuthenticated: true});
+       this.openLoginModal();
        r.json().then(user => {
            if (token) {
                this.setState({isAuthenticated: true, user, token})
@@ -68,9 +70,11 @@ export default class Header extends Component{
       };
       fetch('https://jplug.herokuapp.com/api/auth/facebook', options).then(r => {
           const token = r.headers.get('x-auth-token');
+          this.setState({isAuthenticated: true});
+          this.openLoginModal();
           r.json().then(user => {
               if (token) {
-                  this.setState({isAuthenticated: true, user, token})
+                  // this.setState({isAuthenticated: true, user, token})
               }
           });
       })
