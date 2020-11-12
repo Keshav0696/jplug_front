@@ -34,8 +34,8 @@ export default class Header extends Component{
    const options = {
        method: 'POST',
        body: tokenBlob,
-       mode: 'cors',
-       cache: 'default'
+      //  mode: 'cors',
+      //  cache: 'default'
    };
    fetch('https://jplug.herokuapp.com/api/auth/google', options).then(r => {
        const token = r.headers.get('x-auth-token');
@@ -65,8 +65,8 @@ export default class Header extends Component{
       const options = {
           method: 'POST',
           body: tokenBlob,
-          mode: 'cors',
-          cache: 'default'
+         //  mode: 'cors',
+         //  cache: 'default'
       };
       fetch('https://jplug.herokuapp.com/api/auth/facebook', options).then(r => {
           const token = r.headers.get('x-auth-token');
