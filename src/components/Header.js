@@ -37,7 +37,7 @@ export default class Header extends Component{
        mode: 'cors',
        cache: 'default'
    };
-   fetch('http://localhost:3400/api/auth/google', options).then(r => {
+   fetch('https://jplug.herokuapp.com/api/auth/google', options).then(r => {
        const token = r.headers.get('x-auth-token');
        r.json().then(user => {
            if (token) {
@@ -66,7 +66,7 @@ export default class Header extends Component{
           mode: 'cors',
           cache: 'default'
       };
-      fetch('http://localhost:3400/api/auth/facebook', options).then(r => {
+      fetch('https://jplug.herokuapp.com/api/auth/facebook', options).then(r => {
           const token = r.headers.get('x-auth-token');
           r.json().then(user => {
               if (token) {
@@ -95,6 +95,9 @@ export default class Header extends Component{
     <React.Fragment>
        <div className="header">
 	<div className="container">
+
+   
+
 		<div className="row">
 			<div className="col-md-3">
 				<img alt="true" src="images/logo.png" />
@@ -116,10 +119,23 @@ export default class Header extends Component{
 			</div>
 			<div className="col-md-3">
 				<ul className="toplinks">
-					<li><button  class="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button></li>
-					<li>
-                        <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
-                    </li>
+
+            {this.state.isAuthenticated ?<>
+              <h4>Authenticated</h4>
+              <li>
+              <button onClick={this.logout} className="btn tobtn-green">Logout</button>
+            </li>
+              
+              </> :<><h4>Not Authenticated</h4>
+
+            <li>
+            <button class="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
+          </li>
+          <li>
+          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
+
+          </li>
+              </> } 
 				</ul>
 			</div>
 		</div>
