@@ -365,6 +365,11 @@ p.discover{font-size: 22px; font-weight: 300; color:#636466;}
     width: 100%;
 }
 
+ul.topsrch li .input-group , 
+.bnr-search .input-group {
+    display: flex;
+}
+
 @media screen and (max-width:767px) {
 
 header.header {}
@@ -545,6 +550,42 @@ ul.footer-socil {
   text-align: center;
 }
 
+.row {
+  position: relative;
+}
+
+.col-md-6.search-bar-for-mobile {
+  position: absolute;
+  top: 230px;
+  z-index: 22;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+input#exampleFormControlInput1 {
+  background: #fff;
+}
+
+
+
+input.form-control.cutom-input {
+  background: #fff;
+}
+
+ul.topsrch li .input-group .tobtn-green {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 0;
+}
+.video-container video {
+  height: 50vh;
+  width: auto;
+}
+ul.topsrch li .input-group.custom-flex-header-sec {
+  display: block;
+}
+
 }
 
 .error {
@@ -552,10 +593,7 @@ ul.footer-socil {
 }
 
 
-ul.topsrch li .input-group , 
-.bnr-search .input-group {
-    display: flex;
-}
+
 
 .myform form > .form-group{
   width: 80%;
