@@ -53,7 +53,7 @@ export default class Homepage extends Component{
 <div className="banner-video">
 	<div className="video-container">
 		<video width="100%" height="760" loop autoPlay muted controls >
- 		 <source src="homeVideo.mp4" type="video/mp4" />
+ 		 <source src="https://player.vimeo.com/external/353890750.hd.mp4?s=95cdb39d0c577123df3a219a756d7d6c6550eee9&profile_id=175&title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&playsinline=1&loop=1&background=1" type="video/mp4" />
  		</video>
 	</div>
 	<div className="bnrscearch">
