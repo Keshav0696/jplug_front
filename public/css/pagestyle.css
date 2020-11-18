@@ -411,6 +411,7 @@ button.btn.tobtn-green {}
   background: #0c6;
   padding: 15px 0;
   position: inherit;
+  display: none;
 }
 
 .video-container video {
