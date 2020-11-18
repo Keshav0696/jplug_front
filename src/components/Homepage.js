@@ -69,6 +69,142 @@ export default class Homepage extends Component{
 	</div>
 </div>
 
+<div className="suggested-container">
+    <div className="container">
+    <div className="suggested-text-home-page">
+        <p>Suggested in Washington</p>
+    </div>
+    
+    <div className="suggested-iteams-container">
+    
+      <div className="suggested-iteams">
+        <img src="images/11.png" />
+          <label>Strains</label>
+    </div>
+        
+             <div className="suggested-iteams">
+        <img src="images/22.png" />
+          <label>Deals</label>
+    </div>
+        
+             <div className="suggested-iteams">
+        <img src="images/33.png" />
+          <label>Recreational</label>
+    </div>
+        
+             <div className="suggested-iteams">
+        <img src="images/44.png" />
+          <label>Dispensaries</label>
+    </div>
+        
+             <div className="suggested-iteams">
+        <img src="images/55.png" />
+          <label>Deliveries</label>
+    </div>
+        
+             <div className="suggested-iteams">
+        <img src="images/66.png" />
+          <label>Doctors</label>
+    </div>
+           
+    </div>
+
+</div>
+</div>
+
+
+<div className="main_cta_slide">
+	<div className="wrapper">
+		<div className="heading">marijuana dispensaries, delivery and<br /> doctors in washington 2001</div>
+	</div>
+</div>
+
+
+
+<div className="product-container">
+    <div className="container">
+
+    <div className="product-iteams-container">
+      <div className="product-iteams">
+	  <a href="/#" >  
+		  <div className="product-image-conatiner">
+        <img src="images/product-1.jpg" />
+		</div>
+        <div className="product-name">
+		<h3>Kush coma</h3>
+		</div>
+
+		<div className="product-subdiscription">
+		<p>DC Marijuana Delivery</p>
+		</div>
+
+		<div className="product-rating">
+		<img src="images/rating.jpg" />
+		</div>
+		</a>
+    </div>
+
+	<div className="product-iteams">
+	<a href="/#" >  
+		  <div className="product-image-conatiner">
+        <img src="images/product-1.jpg" />
+		</div>
+        <div className="product-name">
+		<h3>Kush coma</h3>
+		</div>
+
+		<div className="product-subdiscription">
+		<p>DC Marijuana Delivery</p>
+		</div>
+		<div className="product-rating">
+		<img src="images/rating.jpg" />
+		</div>
+		</a>
+ </div>
+
+	<div className="product-iteams">
+	<a href="/#" >  
+		  <div className="product-image-conatiner">
+        <img src="images/product-1.jpg" />
+		</div>
+        <div className="product-name">
+		<h3>Kush coma</h3>
+		</div>
+
+		<div className="product-subdiscription">
+		<p>DC Marijuana Delivery</p>
+		</div>
+		<div className="product-rating">
+		<img src="images/rating.jpg" />
+		</div>
+		</a>
+    </div>
+
+	<div className="product-iteams">
+	<a href="/#" >  
+		  <div className="product-image-conatiner">
+        <img src="images/product-1.jpg" />
+		</div>
+        <div className="product-name">
+		<h3>Kush coma</h3>
+		</div>
+
+		<div className="product-subdiscription">
+		<p>DC Marijuana Delivery</p>
+		</div>
+		<div className="product-rating">
+		<img src="images/rating.jpg" />
+		</div>
+		</a>
+    </div>
+        
+      
+           
+    </div>
+
+</div>
+</div>
+
 <div className="container">
 	<div className="now-to text-center margin-bottom-70">
 		<h1 className="heading1 margin-top-50 m-margin-top-30 margin-bottom-30 m-margin-bottom-20">New to JointPlug?</h1>
