@@ -2,6 +2,7 @@
 
 
 import React, { Component } from 'react';
+import Footer from './Footer';
 // import $ from 'jquery';
 const $ = window.$;
 
@@ -78,33 +79,45 @@ export default class Homepage extends Component{
     <div className="suggested-iteams-container">
     
       <div className="suggested-iteams">
+		  <a href="/#">
         <img src="images/11.png" />
           <label>Strains</label>
+		  </a>
     </div>
         
              <div className="suggested-iteams">
+		<a href="/#">
         <img src="images/22.png" />
           <label>Deals</label>
+		  </a>
     </div>
         
              <div className="suggested-iteams">
+			 <a href="/#">
         <img src="images/33.png" />
           <label>Recreational</label>
+		  </a>
     </div>
         
              <div className="suggested-iteams">
+			 <a href="/#">
         <img src="images/44.png" />
           <label>Dispensaries</label>
+		  </a>
     </div>
         
              <div className="suggested-iteams">
+				 <a href="/#">
         <img src="images/55.png" />
           <label>Deliveries</label>
+		  </a>
     </div>
         
              <div className="suggested-iteams">
+				 <a href="/#">
         <img src="images/66.png" />
           <label>Doctors</label>
+		  </a>
     </div>
            
     </div>
@@ -127,9 +140,14 @@ export default class Homepage extends Component{
     <div className="product-iteams-container">
       <div className="product-iteams">
 	  <a href="/#" >  
-		  <div className="product-image-conatiner">
-        <img src="images/product-1.jpg" />
-		</div>
+			<div className="image-product-parent-container">
+				<div className="product-image-conatiner">
+					<img src="images/product-1.jpg" />
+				</div>
+				<div className="product-forground-img">
+					<img src="images/product-forground-1.jpg" />
+				</div>
+			</div>
         <div className="product-name">
 		<h3>Kush coma</h3>
 		</div>
@@ -145,10 +163,15 @@ export default class Homepage extends Component{
     </div>
 
 	<div className="product-iteams">
-	<a href="/#" >  
-		  <div className="product-image-conatiner">
-        <img src="images/product-1.jpg" />
-		</div>
+  <a href="/#" >  
+			<div className="image-product-parent-container">
+				<div className="product-image-conatiner">
+					<img src="images/product-1.jpg" />
+				</div>
+				<div className="product-forground-img">
+					<img src="images/product-forground-1.jpg" />
+				</div>
+			</div>
         <div className="product-name">
 		<h3>Kush coma</h3>
 		</div>
@@ -156,6 +179,7 @@ export default class Homepage extends Component{
 		<div className="product-subdiscription">
 		<p>DC Marijuana Delivery</p>
 		</div>
+
 		<div className="product-rating">
 		<img src="images/rating.jpg" />
 		</div>
@@ -163,10 +187,15 @@ export default class Homepage extends Component{
  </div>
 
 	<div className="product-iteams">
-	<a href="/#" >  
-		  <div className="product-image-conatiner">
-        <img src="images/product-1.jpg" />
-		</div>
+  <a href="/#" >  
+			<div className="image-product-parent-container">
+				<div className="product-image-conatiner">
+					<img src="images/product-1.jpg" />
+				</div>
+				<div className="product-forground-img">
+					<img src="images/product-forground-1.jpg" />
+				</div>
+			</div>
         <div className="product-name">
 		<h3>Kush coma</h3>
 		</div>
@@ -174,6 +203,7 @@ export default class Homepage extends Component{
 		<div className="product-subdiscription">
 		<p>DC Marijuana Delivery</p>
 		</div>
+
 		<div className="product-rating">
 		<img src="images/rating.jpg" />
 		</div>
@@ -181,10 +211,15 @@ export default class Homepage extends Component{
     </div>
 
 	<div className="product-iteams">
-	<a href="/#" >  
-		  <div className="product-image-conatiner">
-        <img src="images/product-1.jpg" />
-		</div>
+  <a href="/#" >  
+			<div className="image-product-parent-container">
+				<div className="product-image-conatiner">
+					<img src="images/product-1.jpg" />
+				</div>
+				<div className="product-forground-img">
+					<img src="images/product-forground-1.jpg" />
+				</div>
+			</div>
         <div className="product-name">
 		<h3>Kush coma</h3>
 		</div>
@@ -192,6 +227,7 @@ export default class Homepage extends Component{
 		<div className="product-subdiscription">
 		<p>DC Marijuana Delivery</p>
 		</div>
+
 		<div className="product-rating">
 		<img src="images/rating.jpg" />
 		</div>
@@ -339,6 +375,8 @@ export default class Homepage extends Component{
 		</div>		
 	</div>
 </div>
+
+<Footer />
 </React.Fragment>
   )
     }
