@@ -251,7 +251,7 @@ footer.footer .text-center {
   font-size: 17px;
   margin: 0 0 8px 0;
 }
-p{font-size: 18px; color:#636466;}
+p{font-size: 18px;color:#636466;}
 p.discover{font-size: 22px; font-weight: 300; color:#636466;}
 
 .owl-theme .owl-nav button {
@@ -268,9 +268,75 @@ p.discover{font-size: 22px; font-weight: 300; color:#636466;}
 }
 
 
+.main_cta_slide {
+  background: #1fc36a;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
 
+.main_cta_slide .heading {
+  font-size: 2em;
+  text-transform: capitalize;
+}
 
+.suggested-container {
+  padding: 30px 0;
+}
 
+.suggested-text-home-page p {
+  text-align: center;
+  font-size: 2em;
+  color: #1fc36a;
+}
+
+.suggested-iteams-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+.suggested-iteams {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.suggested-iteams label {
+  margin-top: 10px;
+  color: #636466b8;
+  font-weight: 500;
+}
+
+.product-iteams-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container {
+  padding: 40px 0;
+  padding-bottom: 0;
+}
+
+.product-iteams {
+  width: 23%;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.product-image-conatiner, .product-image-conatiner img {
+  width: 100%;
+}
+
+.product-iteams a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product-iteams a:hover, .product-iteams a:focus{
+  text-decoration: none;
+}
 
 
 @media screen and (max-width:767px) {
@@ -425,6 +491,25 @@ ul.footelink {
 .get-app a img {
   width: 93px;
   margin: 0;
+}
+
+.suggested-iteams-container {
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.suggested-iteams {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.product-iteams {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.product-iteams-container {
+  flex-wrap: wrap;
 }
 
 }
