@@ -106,14 +106,14 @@ export default class Header extends Component{
 			<div className="col-md-3">
 				<img alt="true" src="images/logo.png" />
 			</div>
-			<div className="col-md-6">
+			<div className="col-md-6 search-bar-for-mobile">
 				<ul className="topsrch">
 					<li>
 						<input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Country" />
 					</li>
 					<li>
-						<div className="input-group">
-						  <input type="text" className="form-control" placeholder="Type of Business" />
+						<div className="input-group custom-flex-header-sec">
+						  <input type="text" className="form-control cutom-input" placeholder="Type of Business" />
 						  <div className="input-group-prepend">
 						    <button className="btn tobtn-green">SEARCH</button>
 						  </div>
