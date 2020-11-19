@@ -1,3 +1,6 @@
+
+
+
 import React, { Component } from 'react';
 import Footer from './Footer';
 // import $ from 'jquery';
@@ -48,12 +51,12 @@ export default class Homepage extends Component{
 
 <React.Fragment>
 <div className="banner-video">
-	    <div className="video-container"> 
-	   <video width="100%" height="760" playsinline autoplay muted loop>
- 	     <source src="https://player.vimeo.com/external/353890750.hd.mp4" type="video/mp4">
- 	   </video>
+	<div className="video-container">
+		<video width="100%" height="760" loop autoPlay muted controls >
+ 		 <source src="https://player.vimeo.com/external/353890750.hd.mp4?s=95cdb39d0c577123df3a219a756d7d6c6550eee9&profile_id=175&title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&playsinline=1&loop=1&background=1" type="video/mp4" />
+ 		</video>
 	</div>
-	<div className="bnrscearch"> 
+	<div className="bnrscearch">
 		<h1 className="heading1">Discover Trusted Marijuana Businesse in<br/>Your Communinty</h1>
 		<p>Enter your city or zip code below:</p>
 		<div className="bnr-search">
