@@ -617,7 +617,7 @@ ul.topsrch li .input-group.custom-flex-header-sec {
   
   
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   background: #fff;
   top: 0;
   width: 100%;  padding-top: 7px;
