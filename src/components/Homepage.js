@@ -56,7 +56,7 @@ export default class Homepage extends Component{
  		 <source src="https://player.vimeo.com/external/353890750.hd.mp4" type="video/mp4">
  		</video>
 	</div>
-	<div className="bnrscearch">
+	<div className="bnrscearch"> 
 		<h1 className="heading1">Discover Trusted Marijuana Businesse in<br/>Your Communinty</h1>
 		<p>Enter your city or zip code below:</p>
 		<div className="bnr-search">
