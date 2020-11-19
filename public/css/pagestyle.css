@@ -561,7 +561,7 @@ ul.footer-socil {
 
 .col-md-6.search-bar-for-mobile {
   position: absolute;
-  top: 180px;
+  top: 201px;
   z-index: 22;
   left: 0;
   right: 0;
@@ -589,8 +589,9 @@ ul.topsrch li .input-group .tobtn-green {
   padding: 10px 0;
 }
 .video-container video {
-  height: calc(100vh - 125px);
+  height: calc(100vh - 120px);
   width: auto;
+  margin-top: 125px;
 }
 ul.topsrch li .input-group.custom-flex-header-sec {
   display: block;
@@ -687,9 +688,13 @@ button.navbar-toggler_custom {
 }
 
 .header {
-    padding-bottom: 0;
+   padding-bottom: 0;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  top: 0;
+  width: 100%;
 }
-
 }
 
 .error {
