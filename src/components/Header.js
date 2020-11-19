@@ -163,11 +163,11 @@ export default class Header extends Component{
                         <img alt="true" src="images/logo.png" />
                         </div>
 
-                        <button onClick = {this.openNavbar} class="navbar-toggler_custom">
-                    <div class="bars">
-                      <div class="bar1"></div>
-                      <div class="bar2"></div>
-                      <div class="bar3"></div>
+                        <button onClick = {this.openNavbar} className="navbar-toggler_custom">
+                    <div className="bars">
+                      <div className="bar1"></div>
+                      <div className="bar2"></div>
+                      <div className="bar3"></div>
                     </div>
                   </button>
 
