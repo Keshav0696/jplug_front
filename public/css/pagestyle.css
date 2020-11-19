@@ -370,6 +370,11 @@ ul.topsrch li .input-group ,
     display: flex;
 }
 
+
+.show-under-767{
+  display: none;
+}
+
 @media screen and (max-width:767px) {
 
 header.header {}
@@ -556,15 +561,19 @@ ul.footer-socil {
 
 .col-md-6.search-bar-for-mobile {
   position: absolute;
-  top: 230px;
+  top: 180px;
   z-index: 22;
   left: 0;
   right: 0;
   margin: 0 auto;
+  padding: 20px 30px;
+  background: #ffffff85;
+  margin: 0 20px;
 }
 
-input#exampleFormControlInput1 {
+input#exampleFormControlInput1, input.form-control.cutom-input {
   background: #fff;
+  padding: 20px 10px;
 }
 
 
@@ -577,6 +586,7 @@ ul.topsrch li .input-group .tobtn-green {
   margin-top: 10px;
   width: 100%;
   border-radius: 0;
+  padding: 10px 0;
 }
 .video-container video {
   height: 50vh;
@@ -586,14 +596,105 @@ ul.topsrch li .input-group.custom-flex-header-sec {
   display: block;
 }
 
+.suggested-iteams {
+    width: 15%;
+}
+
+.suggested-iteams label {
+    font-size: .7em;
+}
+
+.hide-under-767{
+  display: none;
+}
+
+
+.show-under-767{
+  display: block;
+  position: relative;
+  z-index: 999;
+}
+
+.parent-container-for-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    padding-bottom: 10px;
+}
+
+button.navbar-toggler_custom {
+  display: block;
+  background: #e6e3e300;
+  border: none;
+  outline: none;
+}
+.bars {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #00cc66;
+  margin: 6px 0;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.bar2 {
+  width: 20px;
+}
+.custom-show-container {
+    position: fixed;
+    height: 50vh;
+    background: #fff;
+    width: 100%;
+    top: 0;
+}
+
+.custom-head-nav {
+    z-index: 999;
+}
+
+.custom-show-container ul {
+  margin-top: 100px;
+  list-style: none;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.custom-show-container ul li a {
+    font-size: 1.5em;
+    color: #0c6;
+}
+
+.login-and-section {background: #00cc66;display: flex;padding: 10px 0;justify-content: center;list-style: none;}
+
+.login-and-section li {
+    padding: 0 10px;
+    align-items: center;
+    align-self: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+.login-and-section li:last-child button {
+    background: #047b40;
+    font-size: 16px;
+}
+
+.header {
+    padding-bottom: 0;
+}
+
 }
 
 .error {
   color: red;
 }
-
-
-
 
 .myform form > .form-group{
   width: 80%;
