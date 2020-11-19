@@ -10,10 +10,12 @@ export default class Header extends Component{
       this.state = { 
          loginModalVisible:true,
          registerModalVisible : false,
+         navbarisvisVisible : false,
          isAuthenticated: false, user: null, token: ''};
 
      this.openLoginModal = this.openLoginModal.bind(this);
      this.openRegisterModal = this.openRegisterModal.bind(this);
+     this.openNavbar = this.openNavbar.bind(this);
   }
 
   logout = () => {
@@ -60,6 +62,14 @@ export default class Header extends Component{
       });
     }
 
+    openNavbar() {
+      const navbarisvisVisible = !this.state.navbarisvisVisible;
+      this.setState({
+         navbarisvisVisible: navbarisvisVisible
+      });
+    }
+
+
     responseFacebook(response){
       const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
       const options = {
@@ -103,9 +113,11 @@ export default class Header extends Component{
    
 
 		<div className="row">
-			<div className="col-md-3">
+		
+      	<div className="col-md-3 hide-under-767">
 				<img alt="true" src="images/logo.png" />
 			</div>
+
 			<div className="col-md-6 search-bar-for-mobile">
 				<ul className="topsrch">
 					<li>
@@ -121,16 +133,18 @@ export default class Header extends Component{
 					</li>
 				</ul>
 			</div>
-			<div className="col-md-3">
+
+			<div className="col-md-3 hide-under-767">
 				<ul className="toplinks">
 
             {this.state.isAuthenticated ?<>
-              <h4>Authenticated</h4>
+              {/* <h4>Authenticated</h4> */}
               <li>
               <button onClick={this.logout} className="btn tobtn-green">Logout</button>
             </li>
               
-              </> :<><h4>Not Authenticated</h4>
+              </> :<>
+              {/* <h4>Not Authenticated</h4> */}
 
             <li>
             <button className="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
@@ -142,6 +156,53 @@ export default class Header extends Component{
               </> } 
 				</ul>
 			</div>
+
+               <div className="custom-mobile-nav show-under-767">
+                     <div className="parent-container-for-nav">
+                         <div className="custom-head-nav">
+                        <img alt="true" src="images/logo.png" />
+                        </div>
+
+                        <button onClick = {this.openNavbar} class="navbar-toggler_custom">
+                    <div class="bars">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </div>
+                  </button>
+
+                     </div>
+
+                     <div className="login-and-section">
+                     {this.state.isAuthenticated ?<>
+              {/* <h4>Authenticated</h4> */}
+              <li>
+              <button onClick={this.logout} className="btn tobtn-green">Logout</button>
+            </li>
+              
+              </> :<>
+              {/* <h4>Not Authenticated</h4> */}
+
+            <li>
+            <button className="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
+          </li>
+          <li>
+          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
+
+          </li>
+              </> } 
+                     </div>
+
+                     {this.state.navbarisvisVisible ?<>
+                        <div className="custom-show-container">
+                        <ul>
+                           <li><a href="/#">Home</a></li>
+                        </ul>
+                        </div>
+                        </>:  <></> }
+
+               </div>
+
 		</div>
 	</div>
 </div>
