@@ -591,7 +591,7 @@ ul.topsrch li .input-group .tobtn-green {
 .video-container video {
   height: calc(100vh - 120px);
   width: auto;
-  margin-top: 125px;
+  margin-top: 100px;
 }
 ul.topsrch li .input-group.custom-flex-header-sec {
   display: block;
@@ -614,6 +614,13 @@ ul.topsrch li .input-group.custom-flex-header-sec {
   display: block;
   position: relative;
   z-index: 999;
+  
+  
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  top: 7px;
+  width: 100%;
 }
 
 .parent-container-for-nav {
@@ -688,12 +695,7 @@ button.navbar-toggler_custom {
 }
 
 .header {
-   padding-bottom: 0;
-  position: fixed;
-  z-index: 1;
-  background: #fff;
-  top: 0;
-  width: 100%;
+   padding-bottom: 0; 
 }
 }
 
