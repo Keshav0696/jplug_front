@@ -589,7 +589,7 @@ ul.topsrch li .input-group .tobtn-green {
   padding: 10px 0;
 }
 .video-container video {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 115px);
   width: auto;
   margin-top: 100px;
 }
