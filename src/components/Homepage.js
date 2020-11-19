@@ -67,7 +67,7 @@ export default class Homepage extends Component{
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 
 <div className="suggested-container">
     <div className="container">
