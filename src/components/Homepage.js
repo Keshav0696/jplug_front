@@ -52,7 +52,7 @@ export default class Homepage extends Component{
 <React.Fragment>
 <div className="banner-video">
 	<div className="video-container">
-	    <video loop="" autoplay="" playsInline="" src="https://player.vimeo.com/external/353890750.hd.mp4?s=95cdb39d0c577123df3a219a756d7d6c6550eee9&amp;profile_id=175&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=000000&amp;muted=1&amp;autoplay=1&amp;autopause=0&amp;playsinline=1&amp;loop=1&amp;background=1"></video>
+	    <video loop="" autoPlay="" playsInline="" src="https://player.vimeo.com/external/353890750.hd.mp4?s=95cdb39d0c577123df3a219a756d7d6c6550eee9&amp;profile_id=175&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=000000&amp;muted=1&amp;autoplay=1&amp;autopause=0&amp;playsinline=1&amp;loop=1&amp;background=1"></video>
 		
 	</div>
 	<div className="bnrscearch"> 
