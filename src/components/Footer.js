@@ -42,7 +42,7 @@ export default class Footer extends Component{
 					<li><a href="#">Register</a></li>
 					<li><a href="#">Forget Password?</a></li> 
 				</ul>
-
+ 
 				<p className="text-center">JointPlug Pvt.Ltd. © 2012-2020</p>
 			</div>
 		</div>
