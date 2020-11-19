@@ -52,7 +52,7 @@ export default class Homepage extends Component{
 <React.Fragment>
 <div className="banner-video">
 	    <div className="video-container"> 
-	   <video width="100%" height="760" loop autoPlay controls playsInline>
+	   <video width="100%" height="760" playsinline autoplay muted loop>
  	     <source src="https://player.vimeo.com/external/353890750.hd.mp4" type="video/mp4">
  	   </video>
 	</div>
