@@ -22,13 +22,15 @@ export default class Footer extends Component{
 					<li><a href="#"><img src="images/footer/ft5.png" /></a></li>
 				</ul>
 			</div>
-	      <ul className="footer-socil2">
-					<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-				</ul>
+	      		<ul className="footer-socil2">
+			  <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+			  <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+			  <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+			  <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
+			  <li><a href="#"><i className="fa fa-reddit-alien"></i></a></li>
+			  <li><a href="#"><i className="fa fa-maxcdn"></i></a></li>
+			  <li><a href="#"><i className="fa fa-whatsapp"></i></a></li>
+			</ul>
 			<div className="col-md-12">
 				<ul className="footelink">
 					<li>COMPANY</li>
