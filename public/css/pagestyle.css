@@ -589,7 +589,7 @@ ul.topsrch li .input-group .tobtn-green {
   padding: 10px 0;
 }
 .video-container video {
-  height: 50vh;
+  height: calc(100vh - 125px);
   width: auto;
 }
 ul.topsrch li .input-group.custom-flex-header-sec {
