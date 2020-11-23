@@ -756,3 +756,9 @@ ul.footer-socil2 li:nth-child(9) {
 .twitre button {padding: 0; border: 0 none;  background: transparent;}
 .twitre button a { padding: 4px 0 0 0;}
 
+@media only screen and (max-width: 500px) {
+  .video-container video {
+    position: relative;
+    left: -80%;
+  }
+}
