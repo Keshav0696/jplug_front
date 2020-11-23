@@ -484,7 +484,7 @@ ul.footelink li {
   margin: 0 5px;
   font-size: 13px;
   text-align: center;
-  display: inline-block;
+  display: none;
 }
 
 ul.footer-socil li {
@@ -716,6 +716,7 @@ button.navbar-toggler_custom {
   z-index: 1;
 }
 .footer-new ul{width:100%;}
+  .footer-new ul li{display: inline-block;}
   ul.footer-socil2 {
   margin: 0;
   padding: 0;
