@@ -162,7 +162,7 @@ export default class Header extends Component{
                          <div className="custom-head-nav">
                         <img alt="true" src="images/logo.png" />
                         </div>
-
+			<button class="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
                         <button onClick = {this.openNavbar} className="navbar-toggler_custom">
                     <div className="bars">
                       <div className="bar1"></div>
