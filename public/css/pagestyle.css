@@ -248,7 +248,7 @@ ul.footelink li a {
 
 footer.footer .text-center {
   text-align: center;
-  font-size: 17px;
+  font-size: 14px;
   margin: 0 0 8px 0;
 }
 p{font-size: 18px;color:#636466;}
@@ -496,12 +496,14 @@ footer.footer h1.heading2 {
   text-align: center;
 }
 
-footer.footer p {
+footer.footer p.text-center {
   text-align: center;
+  font-size: 15px;
+  margin: 0 0 6px 0;
 }
 
 ul.footelink {
-  margin: 15px 0;
+  margin: 5px 0 5px;
   display: block;
   text-align: center;
 }
@@ -691,7 +693,7 @@ button.navbar-toggler_custom {
     align-self: center;
     color: #fff;
     font-size: 15px;
-} 
+}
 
 .login-and-section li:last-child button {
     background: #047b40;
@@ -706,12 +708,14 @@ button.navbar-toggler_custom {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+  display: block;
   position: fixed;
   bottom: 0;
+  background: #c3f53c;
   width: 100%;
   z-index: 1;
 }
+.footer-new ul{width:100%;}
   ul.footer-socil2 {
   margin: 0;
   padding: 0;
