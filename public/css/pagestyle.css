@@ -697,6 +697,17 @@ button.navbar-toggler_custom {
 .header {
    padding-bottom: 0; 
 }
+  
+ .footer-new {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
   ul.footer-socil2 {
   margin: 0;
   padding: 0;
