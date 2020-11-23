@@ -374,7 +374,7 @@ ul.topsrch li .input-group ,
 .show-under-767{
   display: none;
 }
-ul.footer-socil2{display:none;}
+.footer-new, ul.footer-socil2{display:none;}
 @media screen and (max-width:767px) {
 
 header.header {}
