@@ -109,9 +109,6 @@ export default class Header extends Component{
     <React.Fragment>
        <div className="header">
 	<div className="container">
-
-   
-
 		<div className="row">
 		
       	<div className="col-md-3 hide-under-767">
