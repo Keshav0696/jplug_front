@@ -411,7 +411,13 @@ ul.toplinks {
   height: 33px;
 }
 
-button.btn.tobtn-green {}
+button.btn.tobtn-green {
+  background: #0c6;
+  display: block;
+  padding: 2px 15px;
+  height: 30px;
+  z-index: 9;
+  margin-top: 11px;}
 
 .bnr-search .input-group>.input-group-prepend>.btn {
   font-size: 14px;
