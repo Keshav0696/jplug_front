@@ -666,20 +666,24 @@ button.navbar-toggler_custom {
 }
 
 .custom-show-container ul {
-  margin-top: 100px;
+  margin-top:57px;
   list-style: none;
   width: 100%;
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 0;
   text-align: center;
+  background: #0c6;
 }
 
 .custom-show-container ul li a {
     font-size: 1.5em;
-    color: #0c6;
+  color: #fff;
+  padding: 4px;
+  display: block;
 }
 
-.login-and-section {background: #00cc66;display: flex;padding: 10px 0;justify-content: center;list-style: none;}
+.login-and-section {background: #00cc66;display: none;padding: 10px 0;justify-content: center;list-style: none;}
 
 .login-and-section li {
     padding: 0 10px;
