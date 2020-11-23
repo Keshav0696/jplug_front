@@ -655,7 +655,7 @@ button.navbar-toggler_custom {
 }
 .custom-show-container {
     position: fixed;
-    height: 50vh;
+    /*height: 50vh;*/
     background: #fff;
     width: 100%;
     top: 0;
