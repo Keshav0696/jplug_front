@@ -197,6 +197,8 @@ export default class Header extends Component{
                         <div className="custom-show-container">
                         <ul>
                            <li><a href="/#">Home</a></li>
+                           <li><a href="/#" onClick = {this.openLoginModal} >Login</a></li>
+                           <li><a onClick = {this.openRegisterModal} href="/var/www/html/iiiii2/register.html">Join</a></li>
                         </ul>
                         </div>
                         </>:  <></> }
