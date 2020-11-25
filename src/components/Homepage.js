@@ -1,6 +1,4 @@
 
- 
-
 import React, { Component } from 'react';
 import Footer from './Footer';
 // import $ from 'jquery';
@@ -70,7 +68,7 @@ export default class Homepage extends Component{
 	</div>
 </div> 
 	    
-<div className="suggested-container" style="display:none;">
+<div className="suggested-container " >
     <div className="container">
     <div className="suggested-text-home-page">
         <p>Suggested in Washington</p>
