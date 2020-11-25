@@ -4,7 +4,7 @@ export default class Footer extends Component{
    
    render(){
       return (
-    <React.Fragment>
+    <React.Fragment> 
      <footer className="footer">
 	<div className="container">
 		<div className="row">
