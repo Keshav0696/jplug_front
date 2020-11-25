@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Footer from './Footer';
 // import $ from 'jquery';
 const $ = window.$;
-
+ 
 
 export default class Homepage extends Component{
   constructor () {
