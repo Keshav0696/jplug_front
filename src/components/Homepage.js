@@ -68,9 +68,9 @@ export default class Homepage extends Component{
 			</div>
 		</div>
 	</div>
-</div>
-<!--
-<div className="suggested-container">
+</div> 
+	    
+<div className="suggested-container" style="display:none;">
     <div className="container">
     <div className="suggested-text-home-page">
         <p>Suggested in Washington</p>
@@ -123,7 +123,7 @@ export default class Homepage extends Component{
     </div>
 
 </div>
-</div>-->
+</div> 
 
 
 <div className="main_cta_slide">
