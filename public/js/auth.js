@@ -31,45 +31,45 @@ $(function() {
   
 
 
-$(function() {
+// $(function() {
 
-$("form[name='registration']").validate({
-rules: {
-firstname: "required",
-lastname: "required",
-email: {
- required: true,
- email: true
-},
-address: "required",
-password: {
- required: true,
- minlength: 5
-}
-},
+// $("form[name='registration']").validate({
+// rules: {
+// firstname: "required",
+// lastname: "required",
+// email: {
+//  required: true,
+//  email: true
+// },
+// address: "required",
+// password: {
+//  required: true,
+//  minlength: 5
+// }
+// },
 
-messages: {
-firstname: "Please enter your firstname",
-lastname: "Please enter your lastname",
-address: "Please enter your address",
-password: {
- required: "Please provide a password",
- minlength: "Your password must be at least 5 characters long"
-},
-email: "Please enter a valid email address"
-},
+// messages: {
+// firstname: "Please enter your firstname",
+// lastname: "Please enter your lastname",
+// address: "Please enter your address",
+// password: {
+//  required: "Please provide a password",
+//  minlength: "Your password must be at least 5 characters long"
+// },
+// email: "Please enter a valid email address"
+// },
 
-submitHandler: function(form) {
+// submitHandler: function(form) {
    
- $.post('http://localhost:3000/api/auth/register', {
-  firstname:  $("form[name='registration']")[0].firstname.value,
-  lastname: $("form[name='registration']")[0].lastname.value,
-  address:  $("form[name='registration']")[0].address.value,
-  password:  $("form[name='registration']")[0].password.value,
-  email: $("form[name='registration']")[0].email.value
-}, function(data){
-    console.log(data);
-})
-}
-});
-});
+//  $.post('http://localhost:3000/api/auth/register', {
+//   firstname:  $("form[name='registration']")[0].firstname.value,
+//   lastname: $("form[name='registration']")[0].lastname.value,
+//   address:  $("form[name='registration']")[0].address.value,
+//   password:  $("form[name='registration']")[0].password.value,
+//   email: $("form[name='registration']")[0].email.value
+// }, function(data){
+//     console.log(data);
+// })
+// }
+// });
+// });

@@ -39,8 +39,8 @@ export default class Homepage extends Component{
         }
       }
     });
-    $( ".owl-prev").html('<img src="images/aro-l.png">');
-                   $( ".owl-next").html('<img src="images/aro-r.png">');
+    $( ".owl-prev").html('<img  src="images/aro-l.png">');
+                   $( ".owl-next").html('<img  src="images/aro-r.png">');
   }
 
   render(){
@@ -49,7 +49,7 @@ export default class Homepage extends Component{
 <React.Fragment>
 <div className="banner-video">
 	<div className="video-container">
-		<video width="100%" height="760" poster="images/vbg.png" loop autoPlay muted playsInline controls="true" >
+		<video width="100%" height="760" poster="images/vbg.png" loop autoPlay muted playsInline controls={true} >
  		 <source src="https://player.vimeo.com/external/353890750.hd.mp4?s=95cdb39d0c577123df3a219a756d7d6c6550eee9&profile_id=175&title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&playsinline=1&loop=1&background=1" type="video/mp4" />
  		</video>
 	</div>
@@ -77,42 +77,42 @@ export default class Homepage extends Component{
     
       <div className="suggested-iteams">
 		  <a href="/#">
-        <img src="images/11.png" />
+        <img alt='' src="images/11.png" />
           <label>Strains</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 		<a href="/#">
-        <img src="images/22.png" />
+        <img alt='' src="images/22.png" />
           <label>Deals</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 			 <a href="/#">
-        <img src="images/33.png" />
+        <img alt='' src="images/33.png" />
           <label>Recreational</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 			 <a href="/#">
-        <img src="images/44.png" />
+        <img alt='' src="images/44.png" />
           <label>Dispensaries</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 				 <a href="/#">
-        <img src="images/55.png" />
+        <img alt='' src="images/55.png" />
           <label>Deliveries</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 				 <a href="/#">
-        <img src="images/66.png" />
+        <img alt='' src="images/66.png" />
           <label>Doctors</label>
 		  </a>
     </div>
@@ -139,10 +139,10 @@ export default class Homepage extends Component{
 	  <a href="/#" >  
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
-					<img src="images/product-1.jpg" />
+					<img alt='' src="images/product-1.jpg" />
 				</div>
-				<div className="product-forground-img">
-					<img src="images/product-forground-1.jpg" />
+				<div className="product-forground-img ">
+					<img alt='' src="images/product-forground-1.jpg" />
 				</div>
 			</div>
         <div className="product-name">
@@ -154,7 +154,7 @@ export default class Homepage extends Component{
 		</div>
 
 		<div className="product-rating">
-		<img src="images/rating.jpg" />
+		<img alt='' src="images/rating.jpg" />
 		</div>
 		</a>
     </div>
@@ -163,10 +163,10 @@ export default class Homepage extends Component{
   <a href="/#" >  
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
-					<img src="images/product-1.jpg" />
+					<img alt='' src="images/product-1.jpg" />
 				</div>
 				<div className="product-forground-img">
-					<img src="images/product-forground-1.jpg" />
+					<img alt='' src="images/product-forground-1.jpg" />
 				</div>
 			</div>
         <div className="product-name">
@@ -178,7 +178,7 @@ export default class Homepage extends Component{
 		</div>
 
 		<div className="product-rating">
-		<img src="images/rating.jpg" />
+		<img alt='' src="images/rating.jpg" />
 		</div>
 		</a>
  </div>
@@ -187,10 +187,10 @@ export default class Homepage extends Component{
   <a href="/#" >  
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
-					<img src="images/product-1.jpg" />
+					<img alt='' src="images/product-1.jpg" />
 				</div>
 				<div className="product-forground-img">
-					<img src="images/product-forground-1.jpg" />
+					<img alt='' src="images/product-forground-1.jpg" />
 				</div>
 			</div>
         <div className="product-name">
@@ -202,7 +202,7 @@ export default class Homepage extends Component{
 		</div>
 
 		<div className="product-rating">
-		<img src="images/rating.jpg" />
+		<img alt='' src="images/rating.jpg" />
 		</div>
 		</a>
     </div>
@@ -211,10 +211,10 @@ export default class Homepage extends Component{
   <a href="/#" >  
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
-					<img src="images/product-1.jpg" />
+					<img alt='' src="images/product-1.jpg" />
 				</div>
 				<div className="product-forground-img">
-					<img src="images/product-forground-1.jpg" />
+					<img alt='' src="images/product-forground-1.jpg" />
 				</div>
 			</div>
         <div className="product-name">
@@ -226,7 +226,7 @@ export default class Homepage extends Component{
 		</div>
 
 		<div className="product-rating">
-		<img src="images/rating.jpg" />
+		<img alt='' src="images/rating.jpg" />
 		</div>
 		</a>
     </div>
@@ -250,25 +250,25 @@ export default class Homepage extends Component{
 			<div className="row">
 				<div className="col-md-6">
 					<div className="ct-hld">
-						<img alt="true" src="images/ic1.png" />
+						<img  alt="true" src="images/ic1.png" />
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					</div>
 				</div>
 				<div className="col-md-6">
 					<div className="ct-hld">
-						<img alt="true" src="images/ic2.png"/>
+						<img  alt="true" src="images/ic2.png"/>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					</div>
 				</div>
 				<div className="col-md-6">
 					<div className="ct-hld">
-						<img alt="true" src="images/ic3.png"/>
+						<img  alt="true" src="images/ic3.png"/>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					</div>
 				</div>
 				<div className="col-md-6">
 					<div className="ct-hld">
-						<img alt="true" src="images/ic4.png"/>
+						<img  alt="true" src="images/ic4.png"/>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					</div>
 				</div>
@@ -278,9 +278,9 @@ export default class Homepage extends Component{
 			<div className="crear-login">
 				<h1 className="heading1">Login:</h1>
 				<ul>
-					<li><a href="/#"><img alt="true" src="images/fb.png"/></a></li>
-					<li><a href="/#"><img alt="true" src="images/twt.png"/></a></li>
-					<li><a href="/#"><img alt="true" src="images/gpl.png"/></a></li>
+					<li><a href="/#"><img  alt="true" src="images/fb.png"/></a></li>
+					<li><a href="/#"><img  alt="true" src="images/twt.png"/></a></li>
+					<li><a href="/#"><img  alt="true" src="images/gpl.png"/></a></li>
 				</ul>
 				<p>Don't Have Account</p>
 				<button className="btn btn-green creat-btn">Create an Account</button>
@@ -297,7 +297,7 @@ export default class Homepage extends Component{
 
        	<div className="item">
           <div className="thumbnail">
-            <img alt="true" src="images/tumpnail.png"/>
+            <img  alt="true" src="images/tumpnail.png"/>
               <div className="caption">
               	<p>October 27, 2020</p>
                 <h4>How These 7 Amazing Women Changed the weed Industry?</h4>
@@ -308,7 +308,7 @@ export default class Homepage extends Component{
         </div>
        	<div className="item">
           <div className="thumbnail">
-            <img alt="true" src="images/tumpnail.png" />
+            <img  alt="true" src="images/tumpnail.png" />
               <div className="caption">
               	<p>October 27, 2020</p>
                 <h4>How These 7 Amazing Women Changed the weed Industry?</h4>
@@ -320,7 +320,7 @@ export default class Homepage extends Component{
 
        	<div className="item">
           <div className="thumbnail">
-            <img alt="true" src="images/tumpnail.png" />
+            <img  alt="true" src="images/tumpnail.png" />
               <div className="caption">
               	<p>October 27, 2020</p>
                 <h4>How These 7 Amazing Women Changed the weed Industry?</h4>
@@ -332,7 +332,7 @@ export default class Homepage extends Component{
 
         <div className="item">
           <div className="thumbnail">
-            <img alt="true" src="images/tumpnail.png" />
+            <img  alt="true" src="images/tumpnail.png" />
               <div className="caption">
               	<p>October 27, 2020</p>
                 <h4>How These 7 Amazing Women Changed the weed Industry?</h4>
@@ -344,7 +344,7 @@ export default class Homepage extends Component{
 
         <div className="item">
           <div className="thumbnail">
-            <img alt="true" src="images/tumpnail.png" />
+            <img  alt="true" src="images/tumpnail.png" />
               <div className="caption">
               	<p>October 27, 2020</p>
                 <h4>How These 7 Amazing Women Changed the weed Industry?</h4>
@@ -361,14 +361,14 @@ export default class Homepage extends Component{
 <div className="container">
 	<div className="row get-app">
 		<div className="col-md-6">
-			<img alt="true" src="images/app-image.png" className="apimg" />
+			<img  alt="true" src="images/app-image.png" className="apimg" />
 		</div>
 		<div className="col-md-6">
 			<h1 className="heading1 margin-bottom-18 m-margin-bottom-18 m-margin-top-18">Get the App</h1>
 			<p className="discover margin-bottom-50 m-margin-bottom-20">Discover local businesses. Find the best deals.<br/> Connect & share wih friends.</p>
-			<a href="/#" className="margin-right-20 pull-left"><img alt="true" src="images/ply-str.png" /></a>
-			<a href="/#" className="margin-right-20 pull-left"><img alt="true" src="images/ply-str.png" /></a>
-			<a href="/#" className="margin-right-20 pull-left"><img alt="true" src="images/ply-str.png" /></a>
+			<a href="/#" className="margin-right-20 pull-left"><img  alt="true" src="images/ply-str.png" /></a>
+			<a href="/#" className="margin-right-20 pull-left"><img  alt="true" src="images/ply-str.png" /></a>
+			<a href="/#" className="margin-right-20 pull-left"><img  alt="true" src="images/ply-str.png" /></a>
 		</div>		
 	</div>
 </div>

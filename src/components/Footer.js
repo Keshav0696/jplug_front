@@ -10,19 +10,19 @@ export default class Footer extends Component{
 		<div className="row">
 			<div className="col-md-7">
 			<h1 className="heading2">CORPRATE OFFICE</h1>
-				<p><img src="images/ft0.png" /> 111, Tower A1, Loremlpsume Park, Gurugram India</p>
+				<p><img alt='' src="images/ft0.png" /> 111, Tower A1, Loremlpsume Park, Gurugram India</p>
 			</div>
 			<div className="col-md-5">				
 				<h1 className="heading2">CONNECT WITH US</h1>
 				<ul className="footer-socil">
-					<li className=""><a href="#"><img src="images/ft1.png" /></a></li>
-					<li><a href="#"><img src="images/footer/ft2.png" /></a></li>
-					<li><a href="#"><img src="images/footer/ft3.png" /></a></li>
-					<li><a href="#"><img src="images/footer/ft4.png" /></a></li>
-					<li><a href="#"><img src="images/footer/ft5.png" /></a></li>
+					<li className=""><a href="#"><img alt='' src="images/ft1.png" /></a></li>
+					<li><a href="#"><img alt='' src="images/footer/ft2.png" /></a></li>
+					<li><a href="#"><img alt='' src="images/footer/ft3.png" /></a></li>
+					<li><a href="#"><img alt='' src="images/footer/ft4.png" /></a></li>
+					<li><a href="#"><img alt='' src="images/footer/ft5.png" /></a></li>
 				</ul>
 			</div>
-	      		<div class="footer-new">
+	      		<div className="footer-new">
 	      			<div className="suggested-text-home-page">
         <p>Suggested in Washington</p>
     </div>
@@ -31,42 +31,42 @@ export default class Footer extends Component{
     
       <div className="suggested-iteams">
 		  <a href="/#">
-        <img src="images/11-n.png" />
+        <img alt='' src="images/11-n.png" />
           <label>Strains</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 		<a href="/#">
-        <img src="images/22-n.png" />
+        <img alt='' src="images/22-n.png" />
           <label>Deals</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 			 <a href="/#">
-        <img src="images/33-n.png" />
+        <img alt='' src="images/33-n.png" />
           <label>Recreational</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 			 <a href="/#">
-        <img src="images/44-n.png" />
+        <img alt='' src="images/44-n.png" />
           <label>Dispensaries</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 				 <a href="/#">
-        <img src="images/55-n.png" />
+        <img alt='' src="images/55-n.png" />
           <label>Deliveries</label>
 		  </a>
     </div>
         
              <div className="suggested-iteams">
 				 <a href="/#">
-        <img src="images/66-n.png" />
+        <img alt='' src="images/66-n.png" />
           <label>Doctors</label>
 		  </a>
     </div>
