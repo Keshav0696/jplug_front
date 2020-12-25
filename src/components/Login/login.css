@@ -1,8 +1,12 @@
-.container {
+.login_container {
   position: relative;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px 0 30px 0;
+  width: 60%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
 } 
 
 /* style inputs and link buttons */
@@ -97,7 +101,6 @@ input[type=submit]:hover {
 .bottom-container {
   margin-top: 20px;
   text-align: center;
-  background-color: #666;
   border-radius: 0px 0px 4px 4px;
 }
 
