@@ -289,7 +289,7 @@ export default class Header extends Component{
                        </div> */}
                        <div className="col-md-4 mb-3">
                           <p className="text-center googlebtn">
-                          <GoogleLogin
+                          {/*<GoogleLogin
                               clientId={config.GOOGLE_CLIENT_ID}
                               onSuccess={this.googleResponse}
                               onFailure={this.googleResponse}
@@ -297,7 +297,7 @@ export default class Header extends Component{
                              <a  className="google btn mybtn"><i className="fa fa-google-plus">
                              </i> Signin using Google
                              </a>
-                           </GoogleLogin>
+                           </GoogleLogin>*/}
                           </p>
                        </div>
 
@@ -305,23 +305,23 @@ export default class Header extends Component{
                        <div className="col-md-4 mb-3">
                           <p className="text-center">
 
-                              <FacebookLogin
+                              {/*<FacebookLogin
                                appId={config.FACEBOOK_APP_ID}
-                              autoLoad
+                              // autoLoad
                               callback={this.responseFacebook.bind(this)}
                               render={renderProps => (
                                  <a   onClick={renderProps.onClick} className="google btn mybtn"><i className="fa fa-facebook-square">
                                  </i> Signin using Facebook
                                  </a>
                                )}
-                              />
+                              />*/}
                        </p>
                        </div>
 
 
                        <div className="col-md-4 mb-3">
                           <p className="text-center twitre">
-                          <TwitterLogin
+                          {/*<TwitterLogin
                               loginUrl="http://localhost:3400/api/auth/twitter"
                               onFailure={this.twitterResponse}
                               onSuccess={this.twitterResponse}
@@ -330,7 +330,7 @@ export default class Header extends Component{
                         <a className="google btn mybtn"><i className="fa fa-twitter">
                              </i> Signup using Twitter
                              </a>
-                              </TwitterLogin>
+                              </TwitterLogin>*/}
                           </p>
                        </div>
                        <div className="col-md-2 mb-3"></div>
