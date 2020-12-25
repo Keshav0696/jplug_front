@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 // import $ from 'jquery';
 const $ = window.$;
 
@@ -227,7 +228,7 @@ export default class Homepage extends Component {
 																<div className="cta">
 																	<ul>
 
-																		<li className="buy"><a href="/business_signup.php?package=premium">CHOOSE</a></li>
+																		<li className="buy"><Link to="/singup">CHOOSE</Link></li>
 																	</ul>
 																	<span className="trial">7 DAY FREE TRIAL!</span>
 																</div>
@@ -252,7 +253,7 @@ export default class Homepage extends Component {
 																<div className="cta">
 																	<ul>
 
-																		<li className="buy"><a href="/business_signup.php?package=featured">CHOOSE</a></li>
+																		<li className="buy"><Link to="/signup">CHOOSE</Link></li>
 																	</ul>
 																	<span className="trial">7 DAY FREE TRIAL!</span>
 																</div>
@@ -275,7 +276,7 @@ export default class Homepage extends Component {
 
 																<div className="cta">
 																	<ul>
-																		<li><a href="/business_signup.php?package=verified">CHOOSE</a></li>
+																		<li><Link to="/signup?package=verified">CHOOSE</Link></li>
 																	</ul>
 																	<span className="trial">&nbsp;</span>
 																</div>
@@ -296,7 +297,7 @@ export default class Homepage extends Component {
 																</ul>
 																<div className="cta">
 																	<ul>
-																		<li><a href="/business_signup.php?package=claimed">CHOOSE</a></li>
+																		<li><Link to="/signup?package=claimed">CHOOSE</Link></li>
 																	</ul>
 																	<span className="trial">&nbsp;</span>
 																</div>								</div>
@@ -326,25 +327,25 @@ export default class Homepage extends Component {
 																			<th className="premium">
 																				<div className="package">Premium</div>
 																				<span className="price"><span>$</span>999</span><span className="term" data-cents=""> /mo</span>
-																				<div className="cta"><a href="/business_signup.php?package=premium&amp;&amp;type=">Choose </a></div>
+																				<div className="cta"><Link to="/signup?package=premium&amp;&amp;type=">Choose </Link></div>
 																			</th>
 
 																			<th className="featured">
 																				<div className="package">Featured</div>
 																				<span className="price"><span>$</span>549</span><span className="term" data-cents=""> /mo</span>
-																				<div className="cta"><a href="/business_signup.php?package=featured&amp;type=">Choose</a></div>
+																				<div className="cta"><Link to="/signup?package=featured&amp;type=">Choose</Link></div>
 																			</th>
 
 																			<th className="verified">
 																				<div className="package">Verified</div>
 																				<span className="price"><span>$</span>249</span><span className="term" data-cents=""> /mo</span>
-																				<div className="cta"><a href="/business_signup.php?package=verified&amp;type=">Choose</a></div>
+																				<div className="cta"><Link to="/signup?package=verified&amp;type=">Choose</Link></div>
 																			</th>
 
 																			<th className="claimed">
 																				<div className="package">Claimed</div>
 																				<span className="price"><span>$</span>0</span><span className="term" data-cents=""> /mo</span>
-																				<div className="cta"><a href="/business_signup.php?type=">Choose</a></div>
+																				<div className="cta"><Link to="/signup?type=">Choose</Link></div>
 																			</th>
 																		</tr>
 																	</thead>
@@ -352,19 +353,19 @@ export default class Homepage extends Component {
 																		<tr data-toggle="expand" data-target=".full_detail.lsize" className="expanded">
 																			<td className="feature">
 																				Listing Size
-													</td>
+																			</td>
 																			<td className="option">
 																				4x size
-													</td>
+																			</td>
 																			<td className="option">
 																				2x size
-													</td>
+																			</td>
 																			<td className="option">
 																				Standard
-													</td>
+																			</td>
 																			<td className="option">
 																				Standard
-													</td>
+																			</td>
 																		</tr>
 																		<tr className="full_detail lsize expand">
 																			<td colspan="5">
@@ -380,7 +381,7 @@ export default class Homepage extends Component {
 																		<tr className="trbg" data-toggle="expand" data-target=".full_detail.isize">
 																			<td className="feature iconsize">
 																				Icon Size
-													</td>
+																			</td>
 																			<td className="option">
 																				<img src="/images/icon_new_premium.png" />
 																			</td>
@@ -408,19 +409,19 @@ export default class Homepage extends Component {
 																		<tr data-toggle="expand" data-target=".full_detail.reach">
 																			<td className="feature reach">
 																				Extended Reach
-													</td>
+																			</td>
 																			<td className="option">
 																				15 miles
-													</td>
+																			</td>
 																			<td className="option">
 																				10 miles
-													</td>
+																			</td>
 																			<td className="option">
 																				5 Miles
-													</td>
+																			</td>
 																			<td className="option">
 																				None
-													</td>
+																			</td>
 																		</tr>
 																		<tr className="full_detail reach">
 																			<td colspan="5">
