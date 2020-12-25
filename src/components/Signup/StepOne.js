@@ -10,7 +10,7 @@ class StepOne extends Component {
             <React.Fragment>
 
                 <div className="f_container">
-                <div className="col-md-8">
+                <div className="col-md-8 col-sm-12">
                     <h2>Please fill in your information</h2>
                     <form className="form-container">
                       <div className="form-group">
@@ -47,7 +47,7 @@ class StepOne extends Component {
                       </div>
                     </form>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 hide">
                     <h5>General Information</h5>
                     <hr/>
                     <p style={{fontSize: '15px'}}>Please fill out some basic information on your business and we'll see if we can find any matching business information to help you complete the registration process more repidly.</p>

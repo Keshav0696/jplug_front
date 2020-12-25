@@ -133,3 +133,16 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+@media screen and (max-width: 650px){
+
+  .hide{
+    display: none;
+  }
+  .multi_form{
+  width: 90%;
+  padding-top: 50px;
+}
+.multi_form div ol li {
+  padding: 0 0.4rem;
+}
+}

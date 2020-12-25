@@ -202,7 +202,7 @@ export default class Header extends Component{
                          <div className="custom-head-nav">
                         <img alt="true" src="images/logo.png" />
                         </div>
-			<button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
+			<button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/signup">Join</button>
                         <button onClick = {this.openNavbar} className="navbar-toggler_custom">
                     <div className="bars">
                       <div className="bar1"></div>
@@ -227,7 +227,7 @@ export default class Header extends Component{
             <button className="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
           </li>
           <li>
-          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
+          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/signup">Join</button>
 
           </li>
               </> } 
@@ -238,7 +238,7 @@ export default class Header extends Component{
                         <ul>
                            <li><a href="/#">Home</a></li>
                            <li><a href="/#" onClick = {this.openLoginModal} >Login</a></li>
-                           <li><a onClick = {this.openRegisterModal} href="/var/www/html/iiiii2/register.html">Join</a></li>
+                           <li><a onClick = {this.openRegisterModal} href="/signup">Join</a></li>
                         </ul>
                         </div>
                         </>:  <></> }
