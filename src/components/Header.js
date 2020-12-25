@@ -4,6 +4,8 @@ import TwitterLogin from 'react-twitter-auth';
 import { GoogleLogin } from 'react-google-login';
 import config from '../config.json';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 export default class Header extends Component{
    constructor() {
       super();
@@ -86,9 +88,10 @@ export default class Header extends Component{
 
    openLoginModal() {
       const loginModalVisible = !this.state.loginModalVisible;
-      this.setState({
-        loginModalVisible
-      });
+      // this.setState({
+      //   loginModalVisible
+      // });
+      window.location.replace('/login')
     }
 
     openNavbar() {
@@ -128,21 +131,24 @@ export default class Header extends Component{
       this.setState({registerObject : obj});
     }
    async openRegisterModal() {
+      window.location.replace('/signup')
       const registerModalVisible = !this.state.registerModalVisible;
-      await this.setState({registerSubmit :false});
+      // await this.setState({registerSubmit :false});
 
-      this.setState({
-        registerModalVisible
-      });
+      // this.setState({
+      //   registerModalVisible
+      // });
     } 
 
    render(){
-      let loginStyles = this.state.loginModalVisible
+      /*let loginStyles = this.state.loginModalVisible
       ? { display: "block"}
       : { display: "none" };
       let registerStyles = this.state.registerModalVisible
       ? { display: "block"}
-      : { display: "none"};
+      : { display: "none"};*/
+      let loginStyles = {display: 'none'}
+      let registerStyles = {display: 'none'}
       return (
     <React.Fragment>
        <div className="header">
@@ -185,7 +191,7 @@ export default class Header extends Component{
             <button className="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
           </li>
           <li>
-          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/var/www/html/iiiii2/register.html">Join</button>
+          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="#">Join</button>
 
           </li>
               </> } 
