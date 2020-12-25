@@ -47,7 +47,7 @@ class StepOne extends Component {
                       </div>
                     </form>
                 </div>
-                <div className="col-md-3 hide">
+                <div className="col-md-3 hideCol">
                     <h5>General Information</h5>
                     <hr/>
                     <p style={{fontSize: '15px'}}>Please fill out some basic information on your business and we'll see if we can find any matching business information to help you complete the registration process more repidly.</p>

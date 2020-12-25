@@ -135,14 +135,14 @@ input:checked + .slider:before {
 }
 @media screen and (max-width: 650px){
 
-  .hide{
+  .hideCol{
     display: none;
   }
   .multi_form{
-  width: 90%;
-  padding-top: 50px;
-}
-.multi_form div ol li {
-  padding: 0 0.4rem;
-}
+    width: 90%;
+    padding-top: 50px;
+  }
+  .multi_form div ol li {
+    padding: 0 0.4rem;
+  }
 }

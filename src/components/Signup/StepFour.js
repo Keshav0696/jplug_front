@@ -8,7 +8,7 @@ class StepFour extends Component {
     render() {
         return (
             <React.Fragment>
-                <form className="form-container">
+                <form className="form-container clearfix">
                   <div className="col-md-8">
                     <h2>Please fill in your information</h2>
                       <div className="form-group">
