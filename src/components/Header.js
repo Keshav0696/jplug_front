@@ -154,8 +154,7 @@ export default class Header extends Component{
        <div className="header">
 	<div className="container">
 		<div className="row">
-		
-      	<div className="col-md-3 hide-under-767">
+		  <div className="col-md-3 hide-under-767">
 				<img alt="true" src="images/logo.png" />
 			</div>
 

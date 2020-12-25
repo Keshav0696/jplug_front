@@ -83,8 +83,8 @@ export default class Footer extends Component{
 				</ul>
 				<ul className="footelink">
 					<li>USERS</li>
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Register</a></li>
+					<li><Link to="/login">Login</Link></li>
+					<li><Link to="/signup">Register</Link></li>
 					<li><a href="#">Forget Password?</a></li>
 					<li><Link to="/tour">Add your Business</Link></li>
 				</ul>

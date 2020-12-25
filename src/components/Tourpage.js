@@ -30,10 +30,11 @@ export default class Homepage extends Component {
 
 										</span>
 
-										<form method="GET" action="/tour.php">
+										<form>
 											<div className="intro_location">
 												<p>Please enter your city or zip-code to find business solutions in your area.</p>
-												<input type="text" placeholder="eg: Denver, CO" name="usec" value="Lucknow, UP" /><input type="submit" className="intro_submit" value="Go" />
+												<input type="text" placeholder="eg: Denver, CO" name="usec" value="Lucknow, UP" />
+												<input type="submit" className="intro_submit" value="Go" />
 											</div>
 										</form>
 
