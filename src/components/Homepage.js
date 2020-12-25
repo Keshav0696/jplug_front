@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import Footer from './Footer';
 // import $ from 'jquery';
 const $ = window.$;
- 
+
 
 export default class Homepage extends Component{
   constructor () {
     super()
     this.state = {
-  
+
     }
   }
 
   componentDidMount(){
-    $('.owl-carousel').owlCarousel({  
-        items: 3, 
+    $('.owl-carousel').owlCarousel({
+        items: 3,
       loop: true,
-                  margin:10, 
+                  margin:10,
                   dots: false,
                   nav: true,
                   //autoplay:true,
@@ -50,7 +50,7 @@ export default class Homepage extends Component{
 <div className="banner-video">
 	<div className="video-container">
 		<video width="100%" height="760" poster="images/vbg.png" loop autoPlay muted playsInline controls={true} >
- 		 <source src="https://player.vimeo.com/external/353890750.hd.mp4?s=95cdb39d0c577123df3a219a756d7d6c6550eee9&profile_id=175&title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&playsinline=1&loop=1&background=1" type="video/mp4" />
+ 		 <source src="/videoHome.mp4" type="video/mp4" />
  		</video>
 	</div>
 	<div className="bnrscearch">
@@ -65,62 +65,62 @@ export default class Homepage extends Component{
 			</div>
 		</div>
 	</div>
-</div> 
-	    
+</div>
+
 <div className="suggested-container " >
     <div className="container">
     <div className="suggested-text-home-page">
         <p>Suggested in Washington</p>
     </div>
-    
+
     <div className="suggested-iteams-container">
-    
+
       <div className="suggested-iteams">
 		  <a href="/#">
         <img alt='' src="images/11.png" />
           <label>Strains</label>
 		  </a>
     </div>
-        
+
              <div className="suggested-iteams">
 		<a href="/#">
         <img alt='' src="images/22.png" />
           <label>Deals</label>
 		  </a>
     </div>
-        
+
              <div className="suggested-iteams">
 			 <a href="/#">
         <img alt='' src="images/33.png" />
           <label>Recreational</label>
 		  </a>
     </div>
-        
+
              <div className="suggested-iteams">
 			 <a href="/#">
         <img alt='' src="images/44.png" />
           <label>Dispensaries</label>
 		  </a>
     </div>
-        
+
              <div className="suggested-iteams">
 				 <a href="/#">
         <img alt='' src="images/55.png" />
           <label>Deliveries</label>
 		  </a>
     </div>
-        
+
              <div className="suggested-iteams">
 				 <a href="/#">
         <img alt='' src="images/66.png" />
           <label>Doctors</label>
 		  </a>
     </div>
-           
+
     </div>
 
 </div>
-</div> 
+</div>
 
 
 <div className="main_cta_slide">
@@ -136,7 +136,7 @@ export default class Homepage extends Component{
 
     <div className="product-iteams-container">
       <div className="product-iteams">
-	  <a href="/#" >  
+	  <a href="/#" >
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
 					<img alt='' src="images/product-1.jpg" />
@@ -160,7 +160,7 @@ export default class Homepage extends Component{
     </div>
 
 	<div className="product-iteams">
-  <a href="/#" >  
+  <a href="/#" >
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
 					<img alt='' src="images/product-1.jpg" />
@@ -184,7 +184,7 @@ export default class Homepage extends Component{
  </div>
 
 	<div className="product-iteams">
-  <a href="/#" >  
+  <a href="/#" >
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
 					<img alt='' src="images/product-1.jpg" />
@@ -208,7 +208,7 @@ export default class Homepage extends Component{
     </div>
 
 	<div className="product-iteams">
-  <a href="/#" >  
+  <a href="/#" >
 			<div className="image-product-parent-container">
 				<div className="product-image-conatiner">
 					<img alt='' src="images/product-1.jpg" />
@@ -230,9 +230,9 @@ export default class Homepage extends Component{
 		</div>
 		</a>
     </div>
-        
-      
-           
+
+
+
     </div>
 
 </div>
@@ -290,10 +290,10 @@ export default class Homepage extends Component{
 </div>
 <div className="black-bg">
 		<h1 className="heading1">Marijuana News & Events</h1>
- 	
+
     <div className="container" >
        <div className="owl-carousel owl-theme">
-            
+
 
        	<div className="item">
           <div className="thumbnail">
@@ -353,7 +353,7 @@ export default class Homepage extends Component{
             	</div>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
 </div>
 
@@ -369,7 +369,7 @@ export default class Homepage extends Component{
 			<a href="/#" className="margin-right-20 pull-left"><img  alt="true" src="images/ply-str.png" /></a>
 			<a href="/#" className="margin-right-20 pull-left"><img  alt="true" src="images/ply-str.png" /></a>
 			<a href="/#" className="margin-right-20 pull-left"><img  alt="true" src="images/ply-str.png" /></a>
-		</div>		
+		</div>
 	</div>
 </div>
 
