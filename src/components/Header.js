@@ -190,20 +190,20 @@ export default class Header extends Component{
             <button className="nmrl" onClick = {this.openLoginModal} ><img alt="true" src="images/login.png"/>Login</button>
           </li>
           <li>
-          <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="#">Join</button>
-
+          <button onClick={() => {window.location.replace('/join')}} className="btn tobtn-green" href="/join">Join</button>
+          
           </li>
               </> } 
 				</ul>
 			</div>
 
                <div className="custom-mobile-nav show-under-767">
-                     <div className="parent-container-for-nav">
-                         <div className="custom-head-nav">
+                  <div className="parent-container-for-nav">
+                    <div className="custom-head-nav">
                         <img alt="true" src="images/logo.png" />
-                        </div>
-			<button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/signup">Join</button>
-                        <button onClick = {this.openNavbar} className="navbar-toggler_custom">
+                    </div>
+			              <button onClick={() => {window.location.replace('/join')}} className="btn tobtn-green" href="/join">Join</button>
+                    <button onClick = {this.openNavbar} className="navbar-toggler_custom">
                     <div className="bars">
                       <div className="bar1"></div>
                       <div className="bar2"></div>
@@ -238,7 +238,10 @@ export default class Header extends Component{
                         <ul>
                            <li><a href="/#">Home</a></li>
                            <li><a href="/#" onClick = {this.openLoginModal} >Login</a></li>
-                           <li><a onClick = {this.openRegisterModal} href="/signup">Join</a></li>
+                           <li>
+                           {/*<a onClick = {this.openRegisterModal} href="/join">Join</a>*/}
+                           <a onClick = {() => {window.location.replace('/join')}} href="/join">Join</a>
+                           </li>
                         </ul>
                         </div>
                         </>:  <></> }

@@ -34,7 +34,7 @@ class StepThree extends Component {
 		render() {
 				return (
 						<React.Fragment>
-								<div className="f_container">
+								<div className="step_wrap">
 									<div>
 										<h2>Hours of Operation</h2>
 										<form className="form-container clearfix">

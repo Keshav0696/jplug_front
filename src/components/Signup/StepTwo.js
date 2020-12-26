@@ -8,7 +8,7 @@ class StepTwo extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="f_container">
+                <div className="step_wrap">
                   <div className="col-md-8">
                     <h2>Location</h2>
                     <form className="form-container clearfix">

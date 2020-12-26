@@ -28,7 +28,7 @@
 .multiCss{
     background-color: pink;
 }
-.f_container{
+.step_wrap{
     display: flex;
     margin: auto;
     justify-content: space-between;

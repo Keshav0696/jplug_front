@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import Tourpage from './components/Tourpage';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import JoinUs from './components/Signup/JoinUs';
 
 export default class App extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class App extends Component {
                 <div>
                     <Header />
                     <Switch>
+                        <Route exact path='/join' component={JoinUs} />
                         <Route exact path='/signup' component={Signup} />
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/tour' component={Tourpage} />

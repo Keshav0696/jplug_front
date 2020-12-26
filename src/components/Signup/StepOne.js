@@ -8,8 +8,7 @@ class StepOne extends Component {
     render() {
         return (
             <React.Fragment>
-
-                <div className="f_container">
+                <div className="step_wrap">
                 <div className="col-md-8 col-sm-12">
                     <h2>Please fill in your information</h2>
                     <form className="form-container">
