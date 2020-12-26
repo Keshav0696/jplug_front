@@ -1,10 +1,10 @@
 import React, { Component }from 'react';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import TwitterLogin from 'react-twitter-auth';
-import { GoogleLogin } from 'react-google-login';
-import config from '../config.json';
+// import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+// import TwitterLogin from 'react-twitter-auth';
+// import { GoogleLogin } from 'react-google-login';
+// import config from '../config.json';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 export default class Header extends Component{
    constructor() {
