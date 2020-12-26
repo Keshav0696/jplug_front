@@ -15,24 +15,24 @@ class StepTwo extends Component {
                       <div className="form-group">
                         <div className="col-md-6">
                             <label htmlFor="businessName">Address</label>
-                            <input type="text" className="form-control" id="businessName"  placeholder="your business name" />
+                            <input type="text" className="form-control" id="businessName"  placeholder="Address" />
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="businessEmail">Address 2</label>
-                            <input type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                            <input type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="Address2" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
                             <label htmlFor="businessEmail">City</label>
-                            <input type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                            <input type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="City" />
                           </div>
                           <div className="col-md-6">
                             <label htmlFor="phone">State</label>
-                            <input type="text" className="form-control" id="phone" placeholder="9876543210"/>
+                            <input type="text" className="form-control" id="phone" placeholder="State"/>
                           </div>
                       </div>
-                    
+
                     </form>
                 </div>
                 <div className="col-md-3 hideCol">

@@ -16,21 +16,21 @@ class StepOne extends Component {
                       <div className="form-group">
                         <div className="col-md-6">
                             <label htmlFor="businessName">Business Name</label>
-                            <input type="text" className="form-control" id="businessName"  placeholder="your business name" />
+                            <input type="text" className="form-control" id="businessName"  placeholder="Your Business Name" />
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="businessEmail">Business Email</label>
-                            <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                            <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@domain.com" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
-                            <label htmlFor="businessEmail">Business Email</label>
-                            <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                            <label htmlFor="businessEmail">Phone</label>
+                            <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="9999999999" />
                           </div>
                           <div className="col-md-6">
-                            <label htmlFor="phone">Phone</label>
-                            <input type="number" className="form-control" id="phone" placeholder="9876543210"/>
+                            <label htmlFor="phone">Website</label>
+                            <input type="number" className="form-control" id="phone" placeholder="www.example.com"/>
                           </div>
                       </div>
                       <div className="form-group row">
