@@ -51,7 +51,16 @@ const Join = (props) => {
 			<div className="shadow">
 					<div className="content_wrap">
 					<form className="joinPage_form" onSubmit={handleSubmit((formValues) => {
-						
+						axios.post("http://18.191.25.242:3000/api/auth/registerForBuyer",{
+							"username" : formValues.username,
+							"address1" : "test address",
+							"email" : formValues.email,
+							"password" : formValues.pass1,
+							"dob" : '1999-01-11T14:00:07.175Z',
+							"is_newsletter" : formValues.newsletter,
+							"zip_code": formValues.zip,
+							 "receive_message" : formValues.text_specials
+							}).catch(console.log)
 					})}>
 						<input type="hidden" name="do_signup" />
 							<div className="signup_wrap">
