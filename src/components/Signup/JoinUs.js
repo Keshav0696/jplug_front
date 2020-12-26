@@ -56,7 +56,7 @@ const Join = (props) => {
 							"address1" : "test address",
 							"email" : formValues.email,
 							"password" : formValues.pass1,
-							"dob" : '1999-01-11T14:00:07.175Z',
+							"dob" : moment(`${formValues.year}-${formValues.month}-${formValues.day}`,'YYYY-M-DD').format('YYYY-MM-DD[T]HH:ss:mm'),
 							"is_newsletter" : formValues.newsletter,
 							"zip_code": formValues.zip,
 							 "receive_message" : formValues.text_specials
