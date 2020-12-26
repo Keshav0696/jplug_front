@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from './Footer';
 import { Link } from 'react-router-dom';
 // import $ from 'jquery';
 const $ = window.$;
@@ -3223,7 +3222,6 @@ export default class Homepage extends Component {
 						</div>*/}
 
 
-						<Footer />
 </React.Fragment>
   )
 	}

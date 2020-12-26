@@ -23,10 +23,6 @@ class StepFour extends Component {
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
-                            <label htmlFor="businessEmail">Business Email</label>
-                            <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
-                          </div>
-                          <div className="col-md-6">
                             <label htmlFor="phone">Phone</label>
                             <input type="number" className="form-control" id="phone" placeholder="9876543210"/>
                           </div>

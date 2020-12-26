@@ -16,10 +16,24 @@
         font-size: 15px;
         color: #636262;
     }
-.form-container input{
+.step_wrap .form-container input{
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 18px 14px;
+}
+
+.social_section .form-container input{
+    padding: 10px 15px;
+}
+.strain_css div{
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.strain_css label{
+  margin-left: 10px;
 }
 .btype{
     width: 100%;
@@ -57,28 +71,17 @@
     border: none;
     border-radius: 4px;
     margin: 20px;
+    color: #fff;
 }
 .multi_form  button:focus{
     border: none;
 }
-/*.go2478912419:before {
-    position: relative;
-    bottom: -3.80rem;
-    float: left;
-    left: 50%;
-    content: "•";
-    color: white;
-    background-color: #33C3F0;
-    width: 1.9em;
-    line-height: 1.9em;
-    border-radius: 1.2em;
-}*/
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 62px;
+  height: 32px;
 }
 
 .switch input { 
@@ -111,15 +114,15 @@
   transition: .4s;
 }
 
-input:checked + .slider {
+ input:checked + .slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+ input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -133,6 +136,38 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.profile_wrap{
+  background: #ededed;
+  display: flex;
+  padding: 20px;
+  border-radius: 9px;
+}
+ .profile_wrap p{
+    font-size: 16px;
+  }
+.profile_img{
+    width: auto;
+    margin: 12px;
+    border: 1px solid ghostwhite;
+    border-radius: 9px;
+    background: ghostwhite;
+    height: fit-content;
+}
+.step_three-hours input[type=time] {
+  width: 50%;
+  background: transparent;
+  border: none;
+  font-size: 21px;
+  margin-left: 70px;
+}
+.profile_img .fa{
+    font-size: 20px;
+    margin: 34px;
+    /*margin-left: 38px;*/
+}
+.step_wrap .name_css{
+    width: 200px;
+  }
 @media screen and (max-width: 650px){
 
   .hideCol{
@@ -144,5 +179,19 @@ input:checked + .slider:before {
   }
   .multi_form div ol li {
     padding: 0 0.4rem;
+  }
+  .step_three-hours input[type=time]{
+    margin-left: 0px;
+  }
+  .step_wrap .name_css{
+    width: 69px;
+  }
+  .slider:before {
+    height: 20px;
+    width: 20px;
+    }
+  .switch {
+      width: 56px;
+      height: 28px;
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Footer from '../Footer';
 import MultiStep from 'react-multistep';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
@@ -27,7 +26,6 @@ function Signup (props) {
                 <MultiStep showNavigation={true} steps={steps}  prevStyle={prevStyle} nextStyle={nextStyle}/>
             </div>
         </div>
-        <Footer />
     </React.Fragment>
 
     );
