@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 // import $ from 'jquery';
 const $ = window.$;
 
 
-export default class Homepage extends Component{
-	constructor () {
-		super()
-		this.state = {
+export default function Homepage () {
+	const history = useHistory()
 
-		}
-	}
-
-	componentDidMount(){
+	useEffect(() => {
 		$('.owl-carousel').owlCarousel({
 			items: 3,
 			loop: true,
@@ -40,9 +36,8 @@ export default class Homepage extends Component{
 				});
 		$( ".owl-prev").html('<img  src="images/aro-l.png">');
 		$( ".owl-next").html('<img  src="images/aro-r.png">');
-	}
+	}, [])
 
-	render(){
 		return (
 
 			<React.Fragment>
@@ -245,7 +240,9 @@ export default class Homepage extends Component{
 
 			<div className="row">
 			<div className="col-md-8">
-			<h1 className="heading1">Create an Account</h1>
+			<h1 className="heading1" onClick={() => {
+				history.push('/join')
+			}}>Create an Account</h1>
 			<div className="row">
 			<div className="col-md-6">
 			<div className="ct-hld">
@@ -282,7 +279,9 @@ export default class Homepage extends Component{
 			<li><a href="/#"><img  alt="true" src="images/gpl.png"/></a></li>
 			</ul>
 			<p>Don't Have Account</p>
-			<button className="btn btn-green creat-btn">Create an Account</button>
+			<button className="btn btn-green creat-btn" onClick={() => {
+				history.push('/join')
+			}}>Create an Account</button>
 			</div>
 			</div>
 			</div>
@@ -374,5 +373,4 @@ export default class Homepage extends Component{
 
 			</React.Fragment>
 			)
-}
 }

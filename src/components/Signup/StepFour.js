@@ -2,12 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
 import {useSelector, connect, useDispatch} from 'react-redux';
 import axios from 'axios';
+import {useHistory} from 'react-router-dom';
+
 import { ToastContainer, toast } from 'react-toastify';
 
-
-
 const required = (value) => (value ? undefined : "Required");
-
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
   <div >
@@ -21,12 +20,14 @@ const StepFour = (props) => {
 
   const values = useSelector(state => state.form.sellerForm && state.form.sellerForm.values);
   const dispatch = useDispatch()
+  const history = useHistory()
+
   const submit = (e) =>{
     e.preventDefault()
     if (!props.valid) {
       // props.touch("address1");
       // props.touch("city");
-      // props.touch("state"); 
+      // props.touch("state");
 
     } else {
         let url= "http://18.191.25.242:3000/api/auth/registerForSeller"
@@ -45,6 +46,7 @@ const StepFour = (props) => {
           if(response.status === 200){
             toast.success("Registration Successful!");
             dispatch(reset('sellerForm'));
+            history.push('/profile')
           }
         }).catch(e => {
           if (e && e.response && e.response.data.message) {
