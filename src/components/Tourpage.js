@@ -195,20 +195,21 @@ export default class Homepage extends Component {
 			<div className="title">Premium</div>
 			<span className="price"><span>$</span>999</span><span className="term" data-cents=""> /mo</span>
 			<ul className="details">
-			<li><strong>15 Mile Local</strong> Exposure</li>
-			<li><strong>Premium</strong> Map Icon</li>
-			<li><strong>Advanced</strong> Menus &amp; Products</li>
-			<li><strong>Promoted</strong> Daily Deals</li>
-			<li>Page 1 of Results</li>
-			<li>Online Pre-Ordering</li>
-			<li>Business Analytics </li>
-			<li>Call Tracking</li>
-			<li>Marketing Materials</li>											</ul>
+				<li><strong>15 Mile Local</strong> Exposure</li>
+				<li><strong>Premium</strong> Map Icon</li>
+				<li><strong>Advanced</strong> Menus &amp; Products</li>
+				<li><strong>Promoted</strong> Daily Deals</li>
+				<li>Page 1 of Results</li>
+				<li>Online Pre-Ordering</li>
+				<li>Business Analytics </li>
+				<li>Call Tracking</li>
+				<li>Marketing Materials</li>
+			</ul>
 
 			<div className="cta">
 			<ul>
 
-			<li className="buy"><Link to="/singup">CHOOSE</Link></li>
+			<li className="buy"><Link to="/signup">CHOOSE</Link></li>
 			</ul>
 			<span className="trial">7 DAY FREE TRIAL!</span>
 			</div>
