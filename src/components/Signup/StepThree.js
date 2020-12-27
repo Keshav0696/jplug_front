@@ -91,7 +91,10 @@ const weekday = [
 							<i className="fa fa-camera" aria-hidden="true"></i>
 						</div>
 						<div>
-							<button color="success">Upload Image</button>
+							<div className="fileUpload btn btn-primary">
+								<span>Upload</span>
+								<input type="file" className="upload" />
+							</div>
 							<p><span style={{color: 'red'}}>Note</span>: Uploading a profile image will greatly increase the clicks to your profile!</p>
 						</div>
 					</div>
