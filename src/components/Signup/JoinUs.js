@@ -16,7 +16,7 @@ const username = (value) =>
     ? "User name required"
     : undefined;
 const pass1 = max =>(value) =>
-	value && value.length > max ? `Must be ${max} characters or less` : undefined;
+	value && value.length < max ? `Must be ${max} characters or more` : undefined;
 const max1 = pass1(5);
 
 const zip = (value) => value && isNaN(Number(value)) ? 'Must be a number' : undefined
@@ -101,7 +101,11 @@ const Join = (props) => {
 						dispatch(reset('joinForm'));
 						history.push('/profile')
 					}
-				}).catch(console.log)
+				}).catch(e => {
+					if (e && e.response && e.response.data.message) {
+						toast.error(e.response.data.message);
+					}
+				})
 		}
 	}
 
