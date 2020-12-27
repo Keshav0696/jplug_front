@@ -20,6 +20,7 @@ function Signup (props) {
 
     const prevStyle = {'background': '#33c3f0', color: '#fff'}
     const nextStyle = {'background': '#33c3f0', color: '#fff'}
+
     return (
     <React.Fragment>
         <div className="body_wrap">
@@ -45,9 +46,6 @@ function Signup (props) {
     );
 }
 
-// Signup.propTypes = {
-//   onSubmit: PropTypes.func.isRequired
-// }
 
 export default Signup;
 

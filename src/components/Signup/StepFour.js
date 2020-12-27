@@ -1,14 +1,36 @@
 import React, { Component, PropTypes } from 'react';
+import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
+import {useSelector, connect} from 'react-redux';
 
-class StepFour extends Component {
-    constructor(props) {
-        super(props);
+const required = (value) => (value ? undefined : "Required");
+
+
+const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <div >
+      <input {...input} placeholder={label} type={type}/>
+      {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+  </div>
+)
+
+const StepFour = (props) => {
+    const { handleSubmit, reset, setPage } = props;
+
+  const values = useSelector(state => state.form.sellerForm && state.form.sellerForm.values);
+  
+  const validate = (e) =>{
+    e.preventDefault()
+    if (!props.valid) {
+      props.touch("address1");
+      props.touch("city");
+      props.touch("state");
+    } else {
+      setPage(4)
     }
+  }
 
-    render() {
         return (
             <React.Fragment>
-                <form className="form-container clearfix">
+                <form className="form-container clearfix" >
                   <div className="col-md-8">
                     <h2>Please fill in your information</h2>
                       <div className="form-group">
@@ -46,7 +68,10 @@ class StepFour extends Component {
                 </form>
             </React.Fragment>
         );
-    }
 }
 
-export default StepFour;
+let MainReduxForm = reduxForm({form: 'sellerForm'})(StepFour)
+
+export default MainReduxForm = connect((state) => ({
+  synchronousError: getFormSyncErrors("sellerForm")(state), // change name here
+}))(MainReduxForm);
