@@ -176,6 +176,8 @@ const weekday = [
 						they will help you gain transaction on site and
 						make ypur profile more visible in search result.
 					</p>
+					<button style={{ width: '100%', background: "#00cc66", color: "white" }} type="submit">Continue</button>
+          			<button style={{ width: '100%', color: '#aaa', background: '#f7f7f7', border: '2px solid #aaa', marginTop: '0px' }} type="submit">Back</button>
 				</div>
 				
 			</div>
