@@ -2,23 +2,75 @@ import React, { Component, PropTypes } from 'react';
 import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
 import axios from 'axios';
 import moment from 'moment';
-import {useSelector, connect} from 'react-redux';
+import {useSelector, connect, useDispatch} from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
 
-const Required = (value) => (value ? undefined : "Required");
+const required = (value) => (value ? undefined : "Required");
 const email = (value) =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
     ? "Invalid email address"
     : undefined;
+const username = (value) => 
+	value === " "
+    ? "User name required"
+    : undefined;
+const pass1 = max =>(value) => 
+	value && value.length > max ? `Must be ${max} characters or less` : undefined;
+const max1 = pass1(5);
+
+const zip = (value) => value && isNaN(Number(value)) ? 'Must be a number' : undefined
+
+const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <React.Fragment>
+  	<span className="input_wrap">
+      <input {...input} placeholder={label} type={type}/>
+    </span>
+      {touched && ((error && <span className="text-red">{error}</span>) || (warning && <span>{warning}</span>))}
+  </React.Fragment>
+)
+
+
+const renderUsernameField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <React.Fragment>
+  	<span className="input_wrap username">
+      <input {...input} placeholder={label} type={type}/>
+    </span>
+      {touched && ((error && <span className="text-red">{error}</span>) || (warning && <span className="text-red">{warning}</span>))}
+  </React.Fragment>
+)
+
+const renderEmailField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <React.Fragment>
+  	<span className="input_wrap email">
+      <input {...input} placeholder={label} type={type}/>
+    </span>
+      {touched && ((error && <span className="text-red">{error}</span>) || (warning && <span className="text-red">{warning}</span>))}
+  </React.Fragment>
+)
+
+const renderPasswordField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <React.Fragment>
+  	<span className="input_wrap username">
+      <input {...input} placeholder={label} type={type}/>
+    </span>
+      {touched && ((error && <span className="text-red">{error}</span>) || (warning && <span className="text-red">{warning}</span>))}
+  </React.Fragment>
+)
+
+
+
 
 window.m = moment
 
 const Join = (props) => {
-	console.log('props', props)
+	// console.log('props', props)
 	const { handleSubmit, reset } = props;
 	const values = useSelector(state => state.form.joinForm && state.form.joinForm.values)
-	console.log(values)
+	const dispatch = useDispatch()
+	// console.log(values)
 
-	function submit() {
+	function submit(e) {
+		e.preventDefault()
 		if (!props.valid) {
 			props.touch("email");
 			props.touch("pass1");
@@ -32,16 +84,21 @@ const Join = (props) => {
 			props.touch("newsletter");
 		} else {
 			// console.log(formValues)
-			// axios.post("http://18.191.25.242:3000/api/auth/registerForBuyer",{
-			// 	"username" : formValues.username,
-			// 	"address1" : "test address",
-			// 	"email" : formValues.email,
-			// 	"password" : formValues.pass1,
-			// 	"dob" : moment(`${formValues.year}-${formValues.month}-${formValues.date}`,'YYYY-M-DD').format('YYYY-MM-DD[T]HH:ss:mm'),
-			// 	"is_newsletter" : formValues.newsletter,
-			// 	"zip_code": formValues.zip,
-			// 	 "receive_message" : formValues.text_specials
-			// 	}).catch(console.log)
+			axios.post("http://18.191.25.242:3000/api/auth/registerForBuyer",{
+				"username" : values.username,
+				"address1" : "test address",
+				"email" : values.email,
+				"password" : values.pass1,
+				"dob" : moment(`${values.year}-${values.month}-${values.day}`,'YYYY-M-DD').format('YYYY-MM-DD[T]HH:ss:mm'),
+				"is_newsletter" : values.newsletter,
+				"zip_code": values.zip,
+				 "receive_message" : values.text_specials
+				}).then(response => {
+					if(response.status === 200){
+						toast.success("Registration Successful!");
+						dispatch(reset('joinForm'));
+					}
+				}).catch(console.log)
 		}
 	}
 
@@ -50,18 +107,7 @@ const Join = (props) => {
 		<>
 			<div className="shadow">
 					<div className="content_wrap">
-					<form className="joinPage_form" onSubmit={handleSubmit((formValues) => {
-						axios.post("http://18.191.25.242:3000/api/auth/registerForBuyer",{
-							"username" : formValues.username,
-							"address1" : "test address",
-							"email" : formValues.email,
-							"password" : formValues.pass1,
-							"dob" : moment(`${formValues.year}-${formValues.month}-${formValues.day}`,'YYYY-M-DD').format('YYYY-MM-DD[T]HH:ss:mm'),
-							"is_newsletter" : formValues.newsletter,
-							"zip_code": formValues.zip,
-							 "receive_message" : formValues.text_specials
-							}).catch(console.log)
-					})}>
+					<form className="joinPage_form" onSubmit={submit}>
 						<input type="hidden" name="do_signup" />
 							<div className="signup_wrap">
 							<div className="wrapper main full_page">
@@ -70,27 +116,20 @@ const Join = (props) => {
 								<section className="c_6 register_column">
 									<div className="c_12 row">
 										<label htmlFor="username">Username</label>
-										<span className="input_wrap username">
-										<Field name="username" component="input" type="text" />
-										</span>
+										<Field name="username" component={renderUsernameField} type="text" validate={[required]} />
 									</div>
 									<div className="c_12 row">
 										<label htmlFor="email">Email</label>
-										<span className="input_wrap email">
-										<Field name="email" component="input" type="email" validate={[Required, email]} />
-										</span>
+										<Field name="email"component={renderEmailField} type="email" validate={[required, email]} />
 									</div>
 									<div className="c_12 row">
 										<label htmlFor="pass1">Password</label>
-										<span className="input_wrap password">
-										<Field name="pass1" component="input" type="password" />
-										</span>
+										<Field name="pass1"component={renderPasswordField} type="password" validate={[ required, max1 ]}/>
+										
 									</div>
 									<div className="c_12 row">
 										<label htmlFor="pass2">Verify Password</label>
-										<span className="input_wrap password">
-											<Field name="pass2" component="input" type="password" />
-										</span>
+											<Field name="pass2"component={renderPasswordField} type="password" validate={[ required, max1 ]}/>
 									</div>
 									<div className="c_12 row">
 										<label className="one_third">Birthday</label>
@@ -183,7 +222,8 @@ const Join = (props) => {
 									</div>
 									<div className="c_12 row">
 										<label className="one_third" htmlFor="zip">Zip</label>
-										<Field name="zip" component="input" type="text" />
+										<Field name="zip" component={renderField} type="text" validate={[ required, zip ]}/>
+						
 									</div>
 									<div className="c_12 row">
 										<label className="one_third" htmlFor="newsletter">
@@ -238,11 +278,15 @@ const Join = (props) => {
 					</form>
 				</div>
 			</div>
+			<ToastContainer />
 		</>
 	);
 }
 
-let MainReduxForm = reduxForm({form: 'joinForm'})(Join)
+let MainReduxForm = reduxForm({
+	form: 'joinForm',
+	destroyOnUnmount: true
+})(Join)
 
 export default MainReduxForm = connect((state) => ({
   synchronousError: getFormSyncErrors("joinForm")(state), // change name here

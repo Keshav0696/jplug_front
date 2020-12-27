@@ -7,6 +7,10 @@ import Tourpage from './components/Tourpage';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import JoinUs from './components/Signup/JoinUs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 
 export default class App extends Component {
     render() {
@@ -21,6 +25,7 @@ export default class App extends Component {
                         <Route exact path='/tour' component={Tourpage} />
                         <Route exact path='/' component={Homepage} />
                     </Switch>
+                    <ToastContainer />
                     <Footer />
                 </div>
             </BrowserRouter>
