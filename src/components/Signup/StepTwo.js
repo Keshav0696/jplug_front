@@ -1,35 +1,57 @@
 import React, { Component, PropTypes } from 'react';
+import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
+import moment from 'moment';
+import {useSelector, connect} from 'react-redux';
 
-class StepTwo extends Component {
-    constructor(props) {
-        super(props);
+const required = (value) => (value ? undefined : "Required");
+
+
+const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <div >
+      <input {...input} placeholder={label} type={type}/>
+      {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+  </div>
+)
+
+const StepTwo = (props) => {
+
+  const { handleSubmit, reset, setPage } = props;
+  const values = useSelector(state => state.form.sellerForm && state.form.sellerForm.values);
+  const validate = (e) =>{
+    e.preventDefault()
+    if (!props.valid) {
+      props.touch("address1");
+      props.touch("city");
+      props.touch("state");
+    } else {
+      setPage(3)
     }
+  }
 
-    render() {
         return (
             <React.Fragment>
                 <div className="step_wrap">
                   <div className="col-md-8">
                     <h2>Location</h2>
-                    <form className="form-container clearfix">
+                    <form className="form-container clearfix" onSubmit={handleSubmit}>
                       <div className="form-group">
                         <div className="col-md-6">
                             <label htmlFor="businessName">Address</label>
-                            <input type="text" className="form-control" id="businessName"  placeholder="Address" />
+                            <Field component={renderField} type="text" className="form-control" name="address1"  placeholder="Address" validate={[required]}/>
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="businessEmail">Address 2</label>
-                            <input type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="Address2" />
+                            <Field component={renderField} type="text" className="form-control" name="address2" aria-describedby="emailHelp"  placeholder="Address2" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
                             <label htmlFor="businessEmail">City</label>
-                            <input type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="City" />
+                            <Field component={renderField} type="text" className="form-control" name="city" aria-describedby="emailHelp" validate={[required]}placeholder="City" />
                           </div>
                           <div className="col-md-6">
                             <label htmlFor="phone">State</label>
-                            <input type="text" className="form-control" id="phone" placeholder="State"/>
+                            <Field component={renderField} type="text" className="form-control" name="state" placeholder="State" validate={[required]}/>
                           </div>
                       </div>
 
@@ -42,10 +64,13 @@ class StepTwo extends Component {
                 </div>
                 </div>
                 <button type="button" onClick={() => {this.props.setPage(1)}}>Prev</button>
-                <button type="submit" onClick={() => {this.props.setPage(3)}}>Next</button>
+                <button type="submit" onClick={(e) => validate(e)}>Next</button>
             </React.Fragment>
         );
-    }
 }
 
-export default StepTwo;
+let MainReduxForm = reduxForm({form: 'sellerForm'})(StepTwo)
+
+export default MainReduxForm = connect((state) => ({
+  synchronousError: getFormSyncErrors("sellerForm")(state), // change name here
+}))(MainReduxForm);

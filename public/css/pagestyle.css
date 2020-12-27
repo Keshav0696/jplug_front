@@ -491,7 +491,7 @@ ul.footelink li {
   margin: 0 5px;
   font-size: 13px;
   text-align: center;
-  display: none;
+  /*display: none;*/
 }
 
 ul.footer-socil li {

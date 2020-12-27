@@ -3,7 +3,6 @@ import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
 import axios from 'axios';
 import moment from 'moment';
 import {useSelector, connect} from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
 
 const required = (value) => (value ? undefined : "Required");
 const businessEmail = (value) =>
@@ -11,26 +10,54 @@ const businessEmail = (value) =>
     ? "Invalid email address"
     : undefined;
 const businessName = (value) => 
-  value === " "
+  value === ""
     ? "User name required"
     : undefined;
-const phone = max =>(value) => 
-  value && value.length > max ? `Must be ${max} characters or less` : undefined;
+const phone = min =>(value) => 
+  value && value.length > min ? `Must be ${min} characters or more` : undefined;
 const max1 = phone(10);
 
 const num = (value) => value && isNaN(Number(value)) ? 'Must be a number' : undefined
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-  <div >
-      <input {...input} placeholder={label} type={type}/>
-      {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+  <div>
+      <input {...input} placeholder={label} type={type} className="error-input"/>
+      <span className="text-red" style={{display: 'block', height: '20px'}}>{(touched && error) ? error: ''}</span>
   </div>
 )
 
 
 const StepOne = (props) => {
   const { handleSubmit, reset, setPage } = props;
-  const values = useSelector(state => state.form.joinForm && state.form.joinForm.values);
+  const values = useSelector(state => state.form.sellerForm && state.form.sellerForm.values);
+  const validate = (e) =>{
+    e.preventDefault()
+    if (!props.valid) {
+      props.touch("businesEmail");
+      props.touch("businessName");
+      props.touch("businessType");
+      props.touch("phone");
+      props.touch("webUrl");
+    } else {
+      // console.log(formValues)
+      // axios.post("http://18.191.25.242:3000/api/auth/registerForBuyer",{
+      //   "username" : values.username,
+      //   "address1" : "test address",
+      //   "email" : values.email,
+      //   "password" : values.pass1,
+      //   "dob" : moment(`${values.year}-${values.month}-${values.day}`,'YYYY-M-DD').format('YYYY-MM-DD[T]HH:ss:mm'),
+      //   "is_newsletter" : values.newsletter,
+      //   "zip_code": values.zip,
+      //    "receive_message" : values.text_specials
+      //   }).then(response => {
+      //     if(response.status === 200){
+      //       toast.success("Registration Successful!");
+      //       dispatch(reset('joinForm'));
+      //     }
+      //   }).catch(console.log)
+      setPage(2)
+    }
+  }
 
         return (
             <React.Fragment>
@@ -51,7 +78,7 @@ const StepOne = (props) => {
                       <div className="form-group">
                           <div className="col-md-6">
                             <label htmlFor="businessEmail">Phone</label>
-                            <Field component={renderField} name="phone" validate={[required, num, phone]} type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="9999999999" />
+                            <Field component={renderField} name="phone" validate={[required]} type="text" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="9999999999" />
                           </div>
                           <div className="col-md-6">
                             <label htmlFor="website">Website</label>
@@ -61,7 +88,7 @@ const StepOne = (props) => {
                       <div className="form-group row">
                         <div className="col-md-6" style={{paddingLeft: "28px"}}>
                           <label htmlFor="Business Type">Business Type</label><br/>
-                            <Field  component={renderField} className="btype" name="businessType" validate={[required]}>
+                            <Field  component="select" type="select" className="btype" name="businessType" validate={[required]}>
                               <option value="Dispensary">Dispensary</option>
                               <option value="Delivery Service">Delivery Service</option>
                               <option value="Doctor">Doctor</option>
@@ -70,7 +97,7 @@ const StepOne = (props) => {
                             </Field>
                          </div>
                       </div>
-                      <button type="submit" onClick={() => {setPage(2)}}>Next</button>
+                      <button type="submit" onClick={(e) => {validate(e)}}>Next</button>
                     </form>
                 </div>
                 <div className="col-md-3 hideCol">
