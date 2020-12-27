@@ -46,7 +46,7 @@ const StepFour = (props) => {
           if(response.status === 200){
             toast.success("Registration Successful!");
             dispatch(reset('sellerForm'));
-            history.push('/profile')
+            history.push('/login')
           }
         }).catch(e => {
           if (e && e.response && e.response.data.message) {
