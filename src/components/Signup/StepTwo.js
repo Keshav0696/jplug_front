@@ -62,6 +62,8 @@ const StepTwo = (props) => {
                     <h5>Location & Amenities Info</h5>
                     <hr/>
                     <p style={{fontSize: '15px'}}>Please fill out some basic information on your business and we'll see if we can find any matching business information to help you complete the registration process more repidly.</p>
+                    <button style={{ width: '100%', background: "#00cc66", color: "white" }} type="submit">Continue</button>
+                    <button style={{ width: '100%', color: '#aaa', background: '#f7f7f7', border: '2px solid #aaa', marginTop: '0px' }} type="submit">Back</button>
                 </div>
                 </div>
                 <button type="button" onClick={() => {props.setPage(1)}}>Prev</button>
