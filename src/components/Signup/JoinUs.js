@@ -3,6 +3,7 @@ import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
 import axios from 'axios';
 import moment from 'moment';
 import {useSelector, connect, useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 const required = (value) => (value ? undefined : "Required");
@@ -10,11 +11,11 @@ const email = (value) =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
     ? "Invalid email address"
     : undefined;
-const username = (value) => 
+const username = (value) =>
 	value === " "
     ? "User name required"
     : undefined;
-const pass1 = max =>(value) => 
+const pass1 = max =>(value) =>
 	value && value.length > max ? `Must be ${max} characters or less` : undefined;
 const max1 = pass1(5);
 
@@ -67,6 +68,7 @@ const Join = (props) => {
 	const { handleSubmit, reset } = props;
 	const values = useSelector(state => state.form.joinForm && state.form.joinForm.values)
 	const dispatch = useDispatch()
+	const history = useHistory()
 	// console.log(values)
 
 	function submit(e) {
@@ -97,6 +99,7 @@ const Join = (props) => {
 					if(response.status === 200){
 						toast.success("Registration Successful!");
 						dispatch(reset('joinForm'));
+						history.push('/profile')
 					}
 				}).catch(console.log)
 		}
@@ -125,7 +128,7 @@ const Join = (props) => {
 									<div className="c_12 row">
 										<label htmlFor="pass1">Password</label>
 										<Field name="pass1"component={renderPasswordField} type="password" validate={[ required, max1 ]}/>
-										
+
 									</div>
 									<div className="c_12 row">
 										<label htmlFor="pass2">Verify Password</label>
@@ -223,7 +226,7 @@ const Join = (props) => {
 									<div className="c_12 row">
 										<label className="one_third" htmlFor="zip">Zip</label>
 										<Field name="zip" component={renderField} type="text" validate={[ required, zip ]}/>
-						
+
 									</div>
 									<div className="c_12 row">
 										<label className="one_third" htmlFor="newsletter">
