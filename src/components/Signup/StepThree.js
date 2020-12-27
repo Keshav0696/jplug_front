@@ -6,10 +6,10 @@ const required = (value) => (value ? undefined : "Required");
 
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-  <div >
+  <React.Fragment>
       <input {...input} placeholder={label} type={type}/>
       {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-  </div>
+  </React.Fragment>
 )
 
 
@@ -24,9 +24,9 @@ const StepThree = (props) => {
 	const validate = (e) =>{
 		e.preventDefault()
 		if (!props.valid) {
-			props.touch("address1");
-			props.touch("city");
-			props.touch("state");
+			// props.touch("address1");
+			// props.touch("city");
+			// props.touch("state");
 		} else {
 			setPage(4)
 		}
@@ -88,7 +88,7 @@ const weekday = [
 				<div>
 					<div className="profile_wrap">
 						<div className="profile_img">
-							<i class="fa fa-camera" aria-hidden="true"></i>
+							<i className="fa fa-camera" aria-hidden="true"></i>
 						</div>
 						<div>
 							<button color="success">Upload Image</button>
@@ -101,10 +101,10 @@ const weekday = [
 							{weekday.map((w, i) => <div key={i}>
 								<span className="name_css">{w.name}</span>
 								<label className="switch">
-									<Field type="checkbox" component={renderField} validate={[required]}/>
+									<input type="checkbox" />
 									<span className="slider round"></span>
 								</label>
-								<input type="time" className="time_css"/>
+								<input type="time" name= "operationTime" className="time_css"/>
 							</div>
 							)}
 						</div>
@@ -118,7 +118,7 @@ const weekday = [
 								<input type="text" name="fb"/>
 								</div>
 								<div className="col-md-6">
-									 <label><i class="fa fa-twitter"></i>Twitter.com/</label><br />
+									 <label><i className="fa fa-twitter"></i>Twitter.com/</label><br />
 									<input type="text" name="fb"/>
 								</div>
 							</div>
@@ -158,7 +158,7 @@ const weekday = [
 	  						<label htmlFor="AddMenu">I'll add my menu afterwards</label>
 						</div>
 						
-						<button type="button" onClick={() => {this.props.setPage(2)}}>Prev</button>
+						<button type="button" onClick={() => {props.setPage(2)}}>Prev</button>
 						<button type="submit" onClick={(e) => validate(e)}>Next</button>
 					</section>
 				</div>
@@ -174,11 +174,12 @@ const weekday = [
 						make ypur profile more visible in search result.
 					</p>
 				</div>
+				
 			</div>
 	);
 }
 
-let MainReduxForm = reduxForm({form: 'sellerForm'})(StepThree)
+let MainReduxForm = reduxForm({form: 'sellerForm', destroyOnUnmount: false})(StepThree)
 
 export default MainReduxForm = connect((state) => ({
   synchronousError: getFormSyncErrors("sellerForm")(state), // change name here

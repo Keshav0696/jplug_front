@@ -25,7 +25,19 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
       <span className="text-red" style={{display: 'block', height: '20px'}}>{(touched && error) ? error: ''}</span>
   </div>
 )
-
+const renderSelectField = ({ input, label, type, meta: { touched, error, warning } }) => (
+  <div>
+      <select {...input} type={type} className="error-input">
+        <option value="">Select </option>
+        <option value="dispensary">Dispensary</option>
+        <option value="delivery service">Delivery Service</option>
+        <option value="doctor">Doctor</option>
+        <option value="smoke shop">Shop</option>
+        <option value="send bank">Seed Bank</option>
+      </select>
+      <span className="text-red" style={{display: 'block', height: '20px'}}>{(touched && error) ? error: ''}</span>
+  </div>
+)
 
 const StepOne = (props) => {
   const { handleSubmit, reset, setPage } = props;
@@ -88,13 +100,9 @@ const StepOne = (props) => {
                       <div className="form-group row">
                         <div className="col-md-6" style={{paddingLeft: "28px"}}>
                           <label htmlFor="Business Type">Business Type</label><br/>
-                            <Field  component="select" type="select" className="btype" name="businessType" validate={[required]}>
-                              <option value="Dispensary">Dispensary</option>
-                              <option value="Delivery Service">Delivery Service</option>
-                              <option value="Doctor">Doctor</option>
-                              <option value="Shop">Shop</option>
-                              <option value="Seed Bank">Seed Bank</option>
-                            </Field>
+                            <Field  component={renderSelectField} type="select" className="btype" name="businessType" validate={[required]} />
+                              
+                            
                          </div>
                       </div>
                       <button type="submit" onClick={(e) => {validate(e)}}>Next</button>
@@ -110,7 +118,7 @@ const StepOne = (props) => {
         );
 }
 
-let MainReduxForm = reduxForm({form: 'sellerForm'})(StepOne)
+let MainReduxForm = reduxForm({form: 'sellerForm', destroyOnUnmount: false})(StepOne)
 
 export default MainReduxForm = connect((state) => ({
   synchronousError: getFormSyncErrors("sellerForm")(state), // change name here

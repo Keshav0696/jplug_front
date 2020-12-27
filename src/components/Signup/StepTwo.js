@@ -7,9 +7,9 @@ const required = (value) => (value ? undefined : "Required");
 
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-  <div >
-      <input {...input} placeholder={label} type={type}/>
-      {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+  <div>
+      <input {...input} placeholder={label} type={type} className="error-input"/>
+      <span className="text-red" style={{display: 'block', height: '20px'}}>{(touched && error) ? error: ''}</span>
   </div>
 )
 
@@ -21,6 +21,7 @@ const StepTwo = (props) => {
     e.preventDefault()
     if (!props.valid) {
       props.touch("address1");
+      // props.touch("address2");
       props.touch("city");
       props.touch("state");
     } else {
@@ -41,13 +42,13 @@ const StepTwo = (props) => {
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="businessEmail">Address 2</label>
-                            <Field component={renderField} type="text" className="form-control" name="address2" aria-describedby="emailHelp"  placeholder="Address2" />
+                            <Field component={renderField} type="text" className="form-control" name="address2" placeholder="Address2" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
                             <label htmlFor="businessEmail">City</label>
-                            <Field component={renderField} type="text" className="form-control" name="city" aria-describedby="emailHelp" validate={[required]}placeholder="City" />
+                            <Field component={renderField} type="text" className="form-control" name="city"  validate={[required]}placeholder="City" />
                           </div>
                           <div className="col-md-6">
                             <label htmlFor="phone">State</label>
@@ -63,13 +64,13 @@ const StepTwo = (props) => {
                     <p style={{fontSize: '15px'}}>Please fill out some basic information on your business and we'll see if we can find any matching business information to help you complete the registration process more repidly.</p>
                 </div>
                 </div>
-                <button type="button" onClick={() => {this.props.setPage(1)}}>Prev</button>
+                <button type="button" onClick={() => {props.setPage(1)}}>Prev</button>
                 <button type="submit" onClick={(e) => validate(e)}>Next</button>
             </React.Fragment>
         );
 }
 
-let MainReduxForm = reduxForm({form: 'sellerForm'})(StepTwo)
+let MainReduxForm = reduxForm({form: 'sellerForm', destroyOnUnmount: false})(StepTwo)
 
 export default MainReduxForm = connect((state) => ({
   synchronousError: getFormSyncErrors("sellerForm")(state), // change name here
