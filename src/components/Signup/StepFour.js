@@ -41,7 +41,8 @@ class StepFour extends Component {
                       </div>
                     </div>
 
-                  <button className="btn btn-primary">Submit</button>
+                  <button className="btn btn-primary" onClick={() => {this.props.setPage(3)}}>Prev</button>
+                  <button className="btn btn-primary" onClick={() => {this.props.submit()}}>Submit</button>
                 </form>
             </React.Fragment>
         );

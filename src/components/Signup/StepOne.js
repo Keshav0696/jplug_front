@@ -21,18 +21,15 @@ const max1 = phone(10);
 const num = (value) => value && isNaN(Number(value)) ? 'Must be a number' : undefined
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-  <div>
-    <label>{label}</label>
-    <div>
+  <div >
       <input {...input} placeholder={label} type={type}/>
-    </div>
       {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
   </div>
 )
 
 
 const StepOne = (props) => {
-  const { handleSubmit, reset } = props;
+  const { handleSubmit, reset, setPage } = props;
   const values = useSelector(state => state.form.joinForm && state.form.joinForm.values);
 
         return (
@@ -73,6 +70,7 @@ const StepOne = (props) => {
                             </Field>
                          </div>
                       </div>
+                      <button type="submit" onClick={() => {setPage(2)}}>Next</button>
                     </form>
                 </div>
                 <div className="col-md-3 hideCol">

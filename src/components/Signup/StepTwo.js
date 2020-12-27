@@ -41,6 +41,8 @@ class StepTwo extends Component {
                     <p style={{fontSize: '15px'}}>Please fill out some basic information on your business and we'll see if we can find any matching business information to help you complete the registration process more repidly.</p>
                 </div>
                 </div>
+                <button type="button" onClick={() => {this.props.setPage(1)}}>Prev</button>
+                <button type="submit" onClick={() => {this.props.setPage(3)}}>Next</button>
             </React.Fragment>
         );
     }

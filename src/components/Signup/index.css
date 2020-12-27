@@ -19,7 +19,7 @@
 .step_wrap .form-container input{
     margin-bottom: 20px;
     border-radius: 5px;
-    padding: 18px 14px;
+    padding: 6px 14px;
 }
 
 .social_section .form-container input{
@@ -51,12 +51,13 @@
 .multi_form{
     margin: auto;
     width: 72%;
+    padding-bottom: 60px;
 }
-.multi_form div ol{
+.navigation div ol{
     text-align: center;
 }
 
-.multi_form div ol li{
+.navigation div ol li{
     display: inline-block;
     text-align: center;
     line-height: 4.8rem;
@@ -72,9 +73,13 @@
     border-radius: 4px;
     margin: 20px;
     color: #fff;
+    /*display: none;*/
+}
+.navigation button{
+  display: none;
 }
 .multi_form  button:focus{
-    border: none;
+    /*border: none;*/
 }
 
 .switch {

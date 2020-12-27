@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes, useState } from 'react';
 import MultiStep from 'react-multistep';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
@@ -8,28 +8,46 @@ import  './index.css';
 
 
 function Signup (props) {
+    // const { onSubmit } = props
+    const [step, setStep] = useState(1);
 
     const steps = [
-      {name: 'StepOne', component: <StepOne/>},
-      {name: 'StepTwo', component: <StepTwo/>},
-      {name: 'StepThree', component: <StepThree/>},
-      {name: 'StepFour', component: <StepFour/>}
+      {name: 'StepOne', component: <React.Fragment />},
+      {name: 'StepTwo', component: <React.Fragment/>},
+      {name: 'StepThree', component: <React.Fragment/>},
+      {name: 'StepFour', component: <React.Fragment/>}
     ];
 
     const prevStyle = {'background': '#33c3f0', color: '#fff'}
     const nextStyle = {'background': '#33c3f0', color: '#fff'}
-
     return (
     <React.Fragment>
         <div className="body_wrap">
+              <div className="navigation">
+                <MultiStep 
+                  showNavigation={true} 
+                  steps={steps}  
+                  prevStyle={prevStyle} 
+                  nextStyle={nextStyle}
+                />
+              </div>
             <div className="multi_form">
-                <MultiStep showNavigation={true} steps={steps}  prevStyle={prevStyle} nextStyle={nextStyle}/>
+                {(step === 1) && <StepOne setPage={(_step) => {setStep(_step)}} />}
+                {(step === 2) && <StepTwo setPage={(_step) => {setStep(_step)}} />}
+                {(step === 3) && <StepThree setPage={(_step) => {setStep(_step)}} />}
+                {(step === 4) && <StepFour setPage={(_step) => {setStep(_step)}} submit={() => {
+                  console.log('submitting')
+                }}/>}
             </div>
         </div>
     </React.Fragment>
 
     );
 }
+
+// Signup.propTypes = {
+//   onSubmit: PropTypes.func.isRequired
+// }
 
 export default Signup;
 

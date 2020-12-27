@@ -133,6 +133,8 @@ class StepThree extends Component {
   						<label htmlFor="AddMenu">I'll add my menu afterwards</label>
 					</div>
 					<button>Continue</button>
+					<button type="button" onClick={() => {this.props.setPage(2)}}>Prev</button>
+					<button type="submit" onClick={() => {this.props.setPage(4)}}>Next</button>
 				</section>
 				</div>
 				<div className="col-md-3 hideCol">
@@ -147,7 +149,9 @@ class StepThree extends Component {
 						make ypur profile more visible in search result.
 					</p>
 				</div>
+				
 			</div>
+
 		);
 	}
 }
