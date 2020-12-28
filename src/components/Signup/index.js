@@ -9,7 +9,7 @@ import  './index.css';
 
 function Signup (props) {
     // const { onSubmit } = props
-    const [step, setStep] = useState(4);
+    const [step, setStep] = useState(1);
 
     const steps = [
       {name: 'StepOne', component: <React.Fragment />},
