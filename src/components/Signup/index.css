@@ -57,6 +57,9 @@
     width: 72%;
     padding-bottom: 60px;
 }
+.multi_form .package_overview {
+  background: none;
+}
 .navigation div ol{
     text-align: center;
 }
