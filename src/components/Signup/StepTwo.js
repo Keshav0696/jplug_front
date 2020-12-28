@@ -60,7 +60,7 @@ const StepTwo = (props) => {
                       <div className="form-group clearfix">
                           <div className="col-md-6">
                             <label htmlFor="businessEmail">City</label>
-                            <Field component={renderField} type="text" className="form-control" name="city"  validate={[required]}placeholder="City" />
+                            <Field component={renderField} type="text" className="form-control" name="city"  validate={[required]} placeholder="City" />
                           </div>
                           <div className="col-md-6">
                             <label htmlFor="phone">State</label>
@@ -77,21 +77,21 @@ const StepTwo = (props) => {
                       <div className="form-group">
                         <div className="col-md-6">
                             <label htmlFor="userName">User Name</label>
-                            <Field  component={renderField} type="text"  className="form-control" id="businessName"  placeholder="xyz123" />
+                            <Field  component={renderField} name="userName" type="text"  className="form-control" placeholder="xyz123" />
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="email">Email</label>
-                            <Field  component={renderField} type="email"  className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                            <Field  component={renderField} name="email" type="email"  className="form-control" placeholder="youremail@gmail.com" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
-                            <label htmlFor="phone">Password</label>
-                            <Field  component={renderField} type="password" className="form-control" id="phone"/>
+                            <label htmlFor="password">Password</label>
+                            <Field  component={renderField} name="userPassword" type="password" className="form-control" id="phone"/>
                           </div>
                           <div className="col-md-6">
-                            <label htmlFor="phone">Password(again)</label>
-                            <Field  component={renderField} type="password" className="form-control" id="phone"/>
+                            <label htmlFor="pasword">Password(again)</label>
+                            <Field  component={renderField} name="userPassword2" type="password" className="form-control" id="phone"/>
                           </div>
                       </div>
                       </div>
@@ -101,22 +101,22 @@ const StepTwo = (props) => {
                       <div className="form-container clearfix">
                       <div className="form-group">
                         <div className="col-md-6">
-                            <label htmlFor="userName">First Name</label>
-                            <Field  component={renderField} type="text"  className="form-control" id="businessName"  placeholder="xyz123" />
+                            <label htmlFor="firstName">First Name</label>
+                            <Field  component={renderField} name="firstName" type="text"  className="form-control"  placeholder="xyz123" />
                         </div>
                         <div className="col-md-6">
-                            <label htmlFor="email">Last Name</label>
-                            <Field  component={renderField} type="text"  className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                            <label htmlFor="lastName">Last Name</label>
+                            <Field  component={renderField} name="lastName" type="text"  className="form-control" placeholder="youremail@gmail.com" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
                             <label htmlFor="phone">Email</label>
-                            <Field  component={renderField}  type="email" className="form-control" id="email"/>
+                            <Field  component={renderField} name="userEmail"  type="email" className="form-control"/>
                           </div>
                           <div className="col-md-6">
-                            <label htmlFor="phone">Phone</label>
-                            <Field component={renderField} type="text" className="form-control" id="phone"/>
+                            <label htmlFor="phoneno">Phone</label>
+                            <Field component={renderField} name="phoneNo" type="text" className="form-control"/>
                           </div>
                       </div>
                     </div>
