@@ -46,7 +46,7 @@ const StepTwo = (props) => {
                   <div className="col-md-8">
                     <h2>Location</h2>
                     <form className="form-container clearfix" onSubmit={handleSubmit}>
-                      <div className="form-group">
+                      <div className="form-group clearfix">
                         <div className="col-md-6">
                             <label htmlFor="businessName">Address</label>
                             <Field component={renderField} type="text" className="form-control" name="address1"  placeholder="Address" validate={[required]}/>
@@ -56,7 +56,7 @@ const StepTwo = (props) => {
                             <Field component={renderField} type="text" className="form-control" name="address2" placeholder="Address2" />
                         </div>
                       </div>
-                      <div className="form-group">
+                      <div className="form-group clearfix">
                           <div className="col-md-6">
                             <label htmlFor="businessEmail">City</label>
                             <Field component={renderField} type="text" className="form-control" name="city"  validate={[required]}placeholder="City" />
@@ -66,7 +66,7 @@ const StepTwo = (props) => {
                             <Field component={renderField} type="text" className="form-control" name="state" placeholder="State" validate={[required]}/>
                           </div>
                       </div>
-                      <div id="map">
+                      <div class="map_style">
                         <GMap />
                       </div>
                     </form>

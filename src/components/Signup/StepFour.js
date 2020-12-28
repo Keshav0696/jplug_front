@@ -58,40 +58,57 @@ const StepFour = (props) => {
 
         return (
             <React.Fragment>
-                <form className="form-container clearfix">
-                  <div className="col-md-8">
-                    <h2 style={{paddingBottom: '30px'}}>New Account Login Information</h2>
+                <form className="step_four">
+                  <h2 style={{paddingBottom: '20px', paddingTop: '20px'}}>New Account Login Information</h2>
+                  <div className="form-container clearfix">
                       <div className="form-group">
                         <div className="col-md-6">
                             <label htmlFor="userName">User Name</label>
                             <input type="text" className="form-control" id="businessName"  placeholder="xyz123" />
                         </div>
                         <div className="col-md-6">
-                            <label htmlFor="businessEmail">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
                         </div>
                       </div>
                       <div className="form-group">
                           <div className="col-md-6">
-                            <label htmlFor="phone">Phone</label>
-                            <input type="number" className="form-control" id="phone" placeholder="9876543210"/>
+                            <label htmlFor="phone">Password</label>
+                            <input type="password" className="form-control" id="phone"/>
+                          </div>
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Password(again)</label>
+                            <input type="password" className="form-control" id="phone"/>
                           </div>
                       </div>
-                      <div className="form-group row">
-                        <div className="col-md-6" style={{paddingLeft: "28px"}}>
-                          <label htmlFor="Business Type">Business Type</label><br/>
-                            <select className="btype" id="businesstype" name="businesstype">
-                              <option value="Dispensary">Dispensary</option>
-                              <option value="Delivery Service">Delivery Service</option>
-                              <option value="Doctor">Doctor</option>
-                              <option value="Shop">Shop</option>
-                              <option value="Seed Bank">Seed Bank</option>
-                            </select>
-                         </div>
                       </div>
+
+
+                      <h2 style={{paddingBottom: '20px', paddingTop: '20px'}}>Manager / Owner</h2>
+                      <div className="form-container clearfix">
+                      <div className="form-group">
+                        <div className="col-md-6">
+                            <label htmlFor="userName">First Name</label>
+                            <input type="text" className="form-control" id="businessName"  placeholder="xyz123" />
+                        </div>
+                        <div className="col-md-6">
+                            <label htmlFor="email">Last Name</label>
+                            <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                        </div>
+                      </div>
+                      <div className="form-group">
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Email</label>
+                            <input type="email" className="form-control" id="email"/>
+                          </div>
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Phone</label>
+                            <input type="text" className="form-control" id="phone"/>
+                          </div>
+                      </div>
+	                  </div>
                     <button className="btn btn-primary" onClick={() => {props.setPage(3)}}>Prev</button>
                     <button className="btn btn-primary" onClick={(e) => {submit(e)}}>Submit</button>
-                  </div>
                 </form>
             </React.Fragment>
         );

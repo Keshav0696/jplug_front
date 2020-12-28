@@ -7,14 +7,17 @@ class GMap extends Component {
     render() {
         const mapStyles = {
           width: '100%',
-          height: '100%',
+          height: '400px',
+          position: 'relative'
+          // height: '100%',
         };
 
         return (
                 <Map
+                  containerStyle={mapStyles}
                   google={this.props.google}
-                  zoom={8}
-                  style={mapStyles}
+                  zoom={15}
+                  // style={mapStyles}
                   initialCenter={{ lat: 47.444, lng: -122.176}}
                 />
         );

@@ -21,7 +21,11 @@
     border-radius: 5px;
     padding: 6px 14px;
 }
-
+.step_four .form-container input{
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 19px;
+}
 .social_section .form-container input{
     padding: 10px 15px;
 }
@@ -198,7 +202,10 @@
     opacity: 0;
     filter: alpha(opacity=0);
 }
-
+.map_style{
+  height: 400px;
+  width: 100%;
+}
 @media screen and (max-width: 650px){
 
   .hideCol{
