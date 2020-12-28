@@ -60,18 +60,17 @@ function StepFive(props) {
   }
 
     return (
-        <div>
+        <div className="tour4 step_five">
             <div className="package_overview">
-
             <div className="wrapper">
-            <div class="short_grid">
-            <div class="grid_column premium">
-                <div class="ribbon-wrapper">
-                    <div class="ribbon"></div>
+            <div className="short_grid">
+            <div className="grid_column premium">
+                <div className="ribbon-wrapper">
+                    <div className="ribbon"></div>
                 </div>
-                <div class="title">Premium</div>
-                    <span class="price"><span>$</span>999</span><span class="term" data-cents=""> /mo</span>
-                    <ul class="details">
+                <div className="title">Premium</div>
+                    <span className="price"><span>$</span>999</span><span className="term" data-cents=""> /mo</span>
+                    <ul className="details">
                         <li><strong>15 Mile Local</strong> Exposure</li>
 
                         <li><strong>Premium</strong> Map Icon</li>
@@ -85,7 +84,7 @@ function StepFive(props) {
                         <li>Call Tracking</li>
                         <li>Marketing Materials</li>
                     </ul>
-                    <div class="cta">
+                    <div className="cta">
                         <div className="trybtn">
                             <button color="warning">
                                 Try
@@ -94,17 +93,17 @@ function StepFive(props) {
                                 Buy
                             </button>
                         </div>
-                        <span class="trial">7 DAY FREE TRIAL!</span>
+                        <span className="trial">7 DAY FREE TRIAL!</span>
                     </div>
                 </div>
-                <div class="grid_column featured value selected">
-                    <div class="ribbon-wrapper">
-                        <div class="ribbon">Best Value</div>
+                <div className="grid_column featured value selected">
+                    <div className="ribbon-wrapper">
+                        <div className="ribbon">Best Value</div>
                     </div>
-                <div class="title">Featured</div>
-                <span class="price"><span>$</span>549</span>
-                <span class="term" data-cents=""> /mo</span>
-                <ul class="details">
+                <div className="title">Featured</div>
+                <span className="price"><span>$</span>549</span>
+                <span className="term" data-cents=""> /mo</span>
+                <ul className="details">
                     <li><strong>10 Mile Local</strong> Exposure</li>
                     <li><strong>Featured</strong> Map Icon</li>
                     <li><strong>Advanced</strong> Menus &amp; Products</li>
@@ -115,7 +114,7 @@ function StepFive(props) {
                     <li>Call Tracking</li>
                     <li>Marketing Materials</li>
                 </ul>
-                <div class="cta">
+                <div className="cta">
                     <div className="trybtn">
                             <button color="warning">
                                 Try
@@ -124,16 +123,16 @@ function StepFive(props) {
                                 Buy
                             </button>
                         </div>
-                        <span class="trial">7 DAY FREE TRIAL!</span></div>
+                        <span className="trial">7 DAY FREE TRIAL!</span></div>
                     </div>
-                    <div class="grid_column verified">
-                    <div class="ribbon-wrapper">
-                    <div class="ribbon"></div>
+                    <div className="grid_column verified">
+                    <div className="ribbon-wrapper">
+                    <div className="ribbon"></div>
                     </div>
-                    <div class="title">Verified</div>
-                    <span class="price"><span>$</span>249</span>
-                    <span class="term" data-cents=""> /mo</span>
-                    <ul class="details">
+                    <div className="title">Verified</div>
+                    <span className="price"><span>$</span>249</span>
+                    <span className="term" data-cents=""> /mo</span>
+                    <ul className="details">
                         <li><strong>5 Mile Local</strong> Exposure</li>
                         <li><strong>Verified</strong> Map Icon</li>
                         <li><strong>Advanced</strong> Menu &amp; Products</li>
@@ -144,34 +143,34 @@ function StepFive(props) {
                         <li>Call Tracking</li>
                         <li>Marketing Materials</li>
                    </ul>
-                <div class="cta">
+                <div className="cta">
                     <div className="trybtn">
                             <button>
                                 Buy
                             </button>
                         </div>
-                    <span class="trial">&nbsp;</span>
+                    <span className="trial">&nbsp;</span>
                 </div>
                 </div>
-                <div class="grid_column claimed">
-                <div class="ribbon-wrapper">
-                    <div class="ribbon"></div>
+                <div className="grid_column claimed">
+                <div className="ribbon-wrapper">
+                    <div className="ribbon"></div>
                 </div>
-                <div class="title">Claimed</div>
-                    <span class="price"><span>$</span>0</span>
-                    <span class="term" data-cents=""> /mo</span>
-                    <ul class="details">          
+                <div className="title">Claimed</div>
+                    <span className="price"><span>$</span>0</span>
+                    <span className="term" data-cents=""> /mo</span>
+                    <ul className="details">          
                         <li><strong>Local</strong> Exposure</li>
                         <li><strong>Standard</strong> Map Icon</li>
                         <li><strong>Limited</strong> Menu &amp; Products</li>
                         <li>Page 2+ of Results</li>
                         <li>Business Analytics </li>
                    </ul>
-                <div class="cta">
+                <div className="cta">
                 <ul>
                     <li><a href="#">CHOOSE</a></li>
                 </ul>
-                 <span class="trial">&nbsp;</span>
+                 <span className="trial">&nbsp;</span>
                 </div>
                 </div>
             </div>
