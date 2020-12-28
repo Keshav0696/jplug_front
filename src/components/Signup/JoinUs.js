@@ -19,6 +19,12 @@ const pass1 = max =>(value) =>
 	value && value.length < max ? `Must be ${max} characters or more` : undefined;
 const max1 = pass1(5);
 
+const validateConfirmPassword = (value, allValues) => {
+  return value && value !== allValues.pass1
+    ? "Confirm Password Mismatch"
+    : undefined;
+};
+
 const zip = (value) => value && isNaN(Number(value)) ? 'Must be a number' : undefined
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
@@ -136,7 +142,7 @@ const Join = (props) => {
 									</div>
 									<div className="c_12 row">
 										<label htmlFor="pass2">Verify Password</label>
-											<Field name="pass2"component={renderPasswordField} type="password" validate={[ required, max1 ]}/>
+											<Field name="pass2"component={renderPasswordField} type="password" validate={[ required, max1, validateConfirmPassword ]}/>
 									</div>
 									<div className="c_12 row">
 										<label className="one_third">Birthday</label>
