@@ -9,22 +9,20 @@ class GMap extends Component {
           width: '100%',
           height: '400px',
           position: 'relative'
-          // height: '100%',
         };
 
         return (
-                <Map
-                  containerStyle={mapStyles}
-                  google={this.props.google}
-                  zoom={15}
-                  // style={mapStyles}
-                  initialCenter={{ lat: 47.444, lng: -122.176}}
-                />
+          <Map
+            containerStyle={mapStyles}
+            google={this.props.google}
+            zoom={15}
+            initialCenter={{ lat: 47.444, lng: -122.176}}
+          />
         );
     }
 }
 
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCP-g2lCwitV2Ul1uCvq-q5QrnUFbcqnMo'
+  apiKey: 'AIzaSyA7CqD38HtBHqG9BXAAktRL6CQwNMj0Yy0'
 })(GMap);
