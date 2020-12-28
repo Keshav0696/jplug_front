@@ -213,6 +213,24 @@
 .trybtn button{
   color: #fff;
 }
+
+.step_five-heading{
+  text-align: center;
+}
+
+/*.step_five .package_overview .grid_column.value:after, .package_overview .grid_column.selected:after{
+  width: 26.2rem;
+}*/
+
+.step_five .package_overview .grid_column.value:before, .package_overview .grid_column.selected:before {
+  /*width: 26.2rem;*/
+  height: 18px;
+}
+/*@media screen and (max-width: 1000px){
+  .step_five .package_overview .grid_column.value:before, .package_overview .grid_column.selected:before {
+    width: 25rem;
+  }
+}*/
 @media screen and (max-width: 650px){
 
   .hideCol{

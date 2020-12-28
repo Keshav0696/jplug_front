@@ -45,7 +45,8 @@ const StepTwo = (props) => {
                 <div className="step_wrap">
                   <div className="col-md-8">
                     <h2>Location</h2>
-                    <form className="form-container clearfix" onSubmit={handleSubmit}>
+                    <form  onSubmit={handleSubmit}>
+                    <div className="form-container clearfix">
                       <div className="form-group clearfix">
                         <div className="col-md-6">
                             <label htmlFor="businessName">Address</label>
@@ -66,9 +67,60 @@ const StepTwo = (props) => {
                             <Field component={renderField} type="text" className="form-control" name="state" placeholder="State" validate={[required]}/>
                           </div>
                       </div>
+
                       <div className="map_style">
                         <GMap />
                       </div>
+                      </div>
+                      <h2 style={{paddingBottom: '20px', paddingTop: '20px'}}>New Account Login Information</h2>
+                      <div className="form-container clearfix">
+                      <div className="form-group">
+                        <div className="col-md-6">
+                            <label htmlFor="userName">User Name</label>
+                            <Field  component={renderField} type="text"  className="form-control" id="businessName"  placeholder="xyz123" />
+                        </div>
+                        <div className="col-md-6">
+                            <label htmlFor="email">Email</label>
+                            <Field  component={renderField} type="email"  className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                        </div>
+                      </div>
+                      <div className="form-group">
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Password</label>
+                            <Field  component={renderField} type="password" className="form-control" id="phone"/>
+                          </div>
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Password(again)</label>
+                            <Field  component={renderField} type="password" className="form-control" id="phone"/>
+                          </div>
+                      </div>
+                      </div>
+
+                      <h2 style={{paddingBottom: '20px', paddingTop: '20px'}}>Manager / Owner</h2>
+                      <div className="form-container clearfix">
+                      <div className="form-container clearfix">
+                      <div className="form-group">
+                        <div className="col-md-6">
+                            <label htmlFor="userName">First Name</label>
+                            <Field  component={renderField} type="text"  className="form-control" id="businessName"  placeholder="xyz123" />
+                        </div>
+                        <div className="col-md-6">
+                            <label htmlFor="email">Last Name</label>
+                            <Field  component={renderField} type="text"  className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
+                        </div>
+                      </div>
+                      <div className="form-group">
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Email</label>
+                            <Field  component={renderField}  type="email" className="form-control" id="email"/>
+                          </div>
+                          <div className="col-md-6">
+                            <label htmlFor="phone">Phone</label>
+                            <Field component={renderField} type="text" className="form-control" id="phone"/>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
                     </form>
                 </div>
                 <div className="col-md-3 hideCol">

@@ -4,7 +4,7 @@ import StepOne from './StepOne';
 import StepTwo from './StepTwo';
 import StepThree from './StepThree';
 import StepFour from './StepFour';
-import StepFive from './StepFive';
+// import StepFive from './StepFive';
 import  './index.css';
 
 
@@ -26,8 +26,11 @@ function Signup (props) {
     <React.Fragment>
         <div className="body_wrap">
               <div className="navigation">
-              {step === 5 ? 
-                <h4 style={{textAlign: 'center'}}>Almost Done!</h4> :
+              {step === 4 ?
+                <div className="step_five-heading"> 
+                  <h2>Almost Done!</h2>
+                  <p>Please confirm your package in order to complete your profile.</p>
+                </div> :
                 <MultiStep 
                   showNavigation={true} 
                   steps={steps}  
@@ -40,8 +43,7 @@ function Signup (props) {
                 {(step === 1) && <StepOne setPage={(_step) => {setStep(_step)}} />}
                 {(step === 2) && <StepTwo setPage={(_step) => {setStep(_step)}} />}
                 {(step === 3) && <StepThree setPage={(_step) => {setStep(_step)}} />}
-                {(step === 4) && <StepFour setPage={(_step) => {setStep(_step)}} />}
-                {(step === 5) && <StepFive setPage={(_step) => {setStep(_step)}} submit={() => {
+                {(step === 4) && <StepFour setPage={(_step) => {setStep(_step)}} submit={() => {
                   console.log('submitting')
                 }}/>}
             </div>

@@ -64,9 +64,9 @@ function StepFive(props) {
             <div className="package_overview">
             <div className="wrapper">
             <div className="short_grid">
-            <div className="grid_column premium">
+            <div className="grid_column featured value selected">
                 <div className="ribbon-wrapper">
-                    <div className="ribbon"></div>
+                    <div className="ribbon">Best Value</div>
                 </div>
                 <div className="title">Premium</div>
                     <span className="price"><span>$</span>999</span><span className="term" data-cents=""> /mo</span>
@@ -96,9 +96,9 @@ function StepFive(props) {
                         <span className="trial">7 DAY FREE TRIAL!</span>
                     </div>
                 </div>
-                <div className="grid_column featured value selected">
+                <div className="grid_column premium">
                     <div className="ribbon-wrapper">
-                        <div className="ribbon">Best Value</div>
+                        <div className="ribbon"></div>
                     </div>
                 <div className="title">Featured</div>
                 <span className="price"><span>$</span>549</span>
