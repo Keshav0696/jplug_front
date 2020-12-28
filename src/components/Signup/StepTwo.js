@@ -67,7 +67,13 @@ const StepTwo = (props) => {
                             <Field component={renderField} type="text" className="form-control" name="state" placeholder="State" validate={[required]}/>
                           </div>
                       </div>
-
+                      <div className="form-group clearfix">
+                          <div className="col-md-6">
+                            <label htmlFor="zipcode">Zipcode</label>
+                            <Field component={renderField} type="text" className="form-control" name="zipcode"  validate={[required]} placeholder="Zipcode" />
+                          </div>
+                          <div className="col-md-6"></div>
+                      </div>
                       <div className="map_style">
                         <GMap />
                       </div>
