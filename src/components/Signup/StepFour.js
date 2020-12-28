@@ -60,14 +60,14 @@ const StepFour = (props) => {
             <React.Fragment>
                 <form className="form-container clearfix">
                   <div className="col-md-8">
-                    <h2 style={{paddingBottom: '30px'}}>Please fill in your information</h2>
+                    <h2 style={{paddingBottom: '30px'}}>New Account Login Information</h2>
                       <div className="form-group">
                         <div className="col-md-6">
-                            <label htmlFor="businessName">Business Name</label>
-                            <input type="text" className="form-control" id="businessName"  placeholder="your business name" />
+                            <label htmlFor="userName">User Name</label>
+                            <input type="text" className="form-control" id="businessName"  placeholder="xyz123" />
                         </div>
                         <div className="col-md-6">
-                            <label htmlFor="businessEmail">Business Email</label>
+                            <label htmlFor="businessEmail">Email</label>
                             <input type="email" className="form-control" id="businessEmail" aria-describedby="emailHelp" placeholder="youremail@gmail.com" />
                         </div>
                       </div>

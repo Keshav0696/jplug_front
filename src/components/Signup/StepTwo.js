@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Field, reduxForm, getFormSyncErrors } from 'redux-form';
 import moment from 'moment';
 import {useSelector, connect} from 'react-redux';
+import GMap from './GMap'
 
 const required = (value) => (value ? undefined : "Required");
 
@@ -14,6 +15,16 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
 )
 
 const StepTwo = (props) => {
+  // let map=google.maps.Map;
+
+  // function initMap() {
+  //   map = new google.maps.Map(document.getElementById("map"), {
+  //     center: { lat: -34.397, lng: 150.644 },
+  //     zoom: 8,
+  //   });
+  // }
+
+
 
   const { handleSubmit, reset, setPage } = props;
   const values = useSelector(state => state.form.sellerForm && state.form.sellerForm.values);
@@ -55,7 +66,9 @@ const StepTwo = (props) => {
                             <Field component={renderField} type="text" className="form-control" name="state" placeholder="State" validate={[required]}/>
                           </div>
                       </div>
-
+                      <div id="map">
+                        <GMap />
+                      </div>
                     </form>
                 </div>
                 <div className="col-md-3 hideCol">
