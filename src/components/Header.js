@@ -2,14 +2,14 @@ import React, { Component }from 'react';
 // import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 // import TwitterLogin from 'react-twitter-auth';
 // import { GoogleLogin } from 'react-google-login';
-// import config from '../config.json';
+import config from '../config.json';
 import axios from 'axios';
 // import {Link} from 'react-router-dom';
 
 export default class Header extends Component{
    constructor() {
       super();
-      this.state = { 
+      this.state = {
          loginModalVisible:true,
          registerModalVisible : false,
          navbarisvisVisible : false,
@@ -31,12 +31,12 @@ export default class Header extends Component{
      this.openLoginModal = this.openLoginModal.bind(this);
      this.openRegisterModal = this.openRegisterModal.bind(this);
      this.openNavbar = this.openNavbar.bind(this);
-  
+
    }
 
    signup = async () => {
       await this.setState({registerSubmit : true});
-      if(!this.state.registerObject.firstname 
+      if(!this.state.registerObject.firstname
          && !this.state.registerObject.lastname
          && !this.state.registerObject.email
          && !this.state.registerObject.password
@@ -52,7 +52,7 @@ export default class Header extends Component{
   logout = () => {
       this.setState({isAuthenticated: false, token: '', user: null})
   };
-  
+
   twitterResponse = (response) => {
    const token = response.headers.get('x-auth-token');
    response.json().then(user => {
@@ -80,7 +80,7 @@ export default class Header extends Component{
            }
        });
    })
-   
+
   };
   onFailure = (error) => {
     alert(error);
@@ -103,6 +103,7 @@ export default class Header extends Component{
 
 
     responseFacebook(response){
+      console.log('response', response)
       const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
       const options = {
           method: 'POST',
@@ -138,7 +139,7 @@ export default class Header extends Component{
       // this.setState({
       //   registerModalVisible
       // });
-    } 
+    }
 
    render(){
       /*let loginStyles = this.state.loginModalVisible
@@ -182,7 +183,7 @@ export default class Header extends Component{
               <li>
               <button onClick={this.logout} className="btn tobtn-green">Logout</button>
             </li>
-              
+
               </> :<>
               {/* <h4>Not Authenticated</h4> */}
 
@@ -191,9 +192,9 @@ export default class Header extends Component{
           </li>
           <li>
           <button onClick={() => {window.location.replace('/join')}} className="btn tobtn-green" href="/join">Join</button>
-          
+
           </li>
-              </> } 
+              </> }
 				</ul>
 			</div>
 
@@ -219,7 +220,7 @@ export default class Header extends Component{
               <li>
               <button onClick={this.logout} className="btn tobtn-green">Logout</button>
             </li>
-              
+
               </> :<>
               {/* <h4>Not Authenticated</h4> */}
 
@@ -230,7 +231,7 @@ export default class Header extends Component{
           <button onClick = {this.openRegisterModal} className="btn tobtn-green" href="/signup">Join</button>
 
           </li>
-              </> } 
+              </> }
                      </div>
 
                      {this.state.navbarisvisVisible ?<>
@@ -279,7 +280,7 @@ export default class Header extends Component{
                        <div className="col-md-12 text-center ">
                           <button type="button" className=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
                        </div>
- 
+
                        <div className="col-md-12 text-center mt-2 clearfix" style={{marginTop: '20px'}}>
                           <p className="text-center">By signing up you accept our <a href="/#">Terms Of Use</a></p>
                        </div>
@@ -307,16 +308,16 @@ export default class Header extends Component{
                        <div className="col-md-4 mb-3">
                           <p className="text-center">
 
-                              {/*<FacebookLogin
-                               appId={config.FACEBOOK_APP_ID}
-                              // autoLoad
-                              callback={this.responseFacebook.bind(this)}
-                              render={renderProps => (
-                                 <a   onClick={renderProps.onClick} className="google btn mybtn"><i className="fa fa-facebook-square">
-                                 </i> Signin using Facebook
-                                 </a>
-                               )}
-                              />*/}
+                            {/*<FacebookLogin
+                             appId={config.FACEBOOK_APP_ID}
+                            // autoLoad
+                            callback={this.responseFacebook.bind(this)}
+                            render={renderProps => (
+                               <a   onClick={renderProps.onClick} className="google btn mybtn"><i className="fa fa-facebook-square">
+                               </i> Signin using Facebook
+                               </a>
+                             )}
+                            />*/}
                        </p>
                        </div>
 
@@ -344,7 +345,7 @@ export default class Header extends Component{
                        </div>
                        </div>
                     </form>
-             
+
             </div>
         </div>
     </div>
@@ -378,7 +379,7 @@ export default class Header extends Component{
                      {
                         this.state.registerSubmit && !this.state.registerObject.firstname ?
                         <div  style = {{color : 'red'}}>
-                        Please enter First Name 
+                        Please enter First Name
                         </div>: null
                      }
                      <div className="form-group">

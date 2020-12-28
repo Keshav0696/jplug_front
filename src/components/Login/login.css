@@ -10,7 +10,7 @@
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-} 
+}
 
 /* style inputs and link buttons */
  .login_css input,
@@ -43,9 +43,31 @@
   color: white;
 }
 
-.google {
+.twitter.btn button{
+  background-color: #55ACEE;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.google.btn {
   background-color: #dd4b39;
   color: white;
+  padding: 0!important;
+}
+.google button {
+  text-align: center;
+  background-color: #dd4b39!important;
+  width: 100%;
+  height: 100%;
+}
+.google button div{
+  color: #fff!important;
+  display: none;
+}
+.google button span {
+  width: 100%;
+  color: #fff;
 }
 
 /* style the submit button */
