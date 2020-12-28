@@ -24,7 +24,7 @@
 .step_four .form-container input{
   margin-bottom: 20px;
   border-radius: 4px;
-  padding: 19px;
+  padding: 11px;
 }
 .social_section .form-container input{
     padding: 10px 15px;
@@ -205,6 +205,13 @@
 .map_style{
   height: 400px;
   width: 100%;
+}
+.trybtn {
+  display: flex;
+  justify-content: space-between;
+}
+.trybtn button{
+  color: #fff;
 }
 @media screen and (max-width: 650px){
 
