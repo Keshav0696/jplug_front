@@ -66,7 +66,7 @@ const StepTwo = (props) => {
                             <Field component={renderField} type="text" className="form-control" name="state" placeholder="State" validate={[required]}/>
                           </div>
                       </div>
-                      <div class="map_style">
+                      <div className="map_style">
                         <GMap />
                       </div>
                     </form>

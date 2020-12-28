@@ -38,13 +38,15 @@ function Login (props) {
 		} else {
 			axios.post("http://18.191.25.242:3000/api/auth/login",{
 				"email" : values.email,
-				"password" : values.pass1,
+				"password" : values.password,
 				}).then(response => {
-						console.log("login response", response)
+						// console.log("login response", response)
 					if(response.status === 200){
 						toast.success("Login Successful!");
 						// dispatch(reset('loginForm'));
-						history.push('/profile')
+						const mytoken = response.data.user.token
+						history.push('/profile');
+						localStorage.setItem('mytoken', mytoken)
 					}
 				}).catch(e => {
 					if (e && e.response && e.response.data.message) {
