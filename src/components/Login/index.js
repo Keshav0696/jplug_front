@@ -43,7 +43,7 @@ function Login (props) {
 		 //  mode: 'cors',
 		 //  cache: 'default'
 	  };
-	  fetch('https://jplug.herokuapp.com/api/auth/facebook', options).then(r => {
+	  fetch('http://18.191.25.242:3000/api/auth/facebook', options).then(r => {
 		  const token = r.headers.get('x-auth-token');
 		  // this.setState({isAuthenticated: true});
 		  // this.openLoginModal();
@@ -77,7 +77,7 @@ function Login (props) {
 		  //  mode: 'cors',
 		  //  cache: 'default'
 		};
-		fetch('https://jplug.herokuapp.com/api/auth/google', options).then(r => {
+		fetch('http://18.191.25.242:3000/api/auth/google', options).then(r => {
 		   const token = r.headers.get('x-auth-token');
 		   // this.setState({isAuthenticated: true});
 		   // this.openLoginModal();
@@ -144,10 +144,10 @@ function Login (props) {
 							/>
 							<a href="#" className="twitter btn">
 								<TwitterLogin
-								  loginUrl="http://localhost:3400/api/auth/twitter"
+								  loginUrl="http://18.191.25.242:3000/api/auth/twitter"
 								  onFailure={twitterResponse}
 								  onSuccess={twitterResponse}
-								  requestTokenUrl="http://localhost:3400/api/auth/twitter/reverse"
+								  requestTokenUrl="http://18.191.25.242:3000/api/auth/twitter/reverse"
 								  >
 										<i className="fa fa-twitter fa-fw"></i> Login with Twitter
 								</TwitterLogin>
