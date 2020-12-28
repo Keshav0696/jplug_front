@@ -173,9 +173,9 @@ export default class Homepage extends Component {
 			</div>
 
 			<div className="c_4 map">
-			<h2>Local Reach</h2>
+				<h2>Local Reach</h2>
 			<div className="map_wrap">
-			<img className="map_image" src="/images/map_preview_premium.jpg" />
+				<img className="map_image" src="/images/map_preview_premium.jpg" />
 			</div>
 			</div>
 			</div>
@@ -245,21 +245,23 @@ export default class Homepage extends Component {
 
 			<div className="title">Verified</div>
 			<span className="price"><span>$</span>249</span><span className="term" data-cents=""> /mo</span>
-			<ul className="details">										<li><strong>5 Mile Local</strong> Exposure</li>
-			<li><strong>Verified</strong> Map Icon</li>
-			<li><strong>Advanced</strong> Menu &amp; Products</li>
-			<li><strong>Promoted</strong> Daily Deals</li>
-			<li>Page 1 of Results</li>
-			<li>Online Pre-Ordering</li>
-			<li>Business Analytics </li>
-			<li>Call Tracking</li>
-			<li>Marketing Materials</li>											</ul>
+			<ul className="details">
+				<li><strong>5 Mile Local</strong> Exposure</li>
+				<li><strong>Verified</strong> Map Icon</li>
+				<li><strong>Advanced</strong> Menu &amp; Products</li>
+				<li><strong>Promoted</strong> Daily Deals</li>
+				<li>Page 1 of Results</li>
+				<li>Online Pre-Ordering</li>
+				<li>Business Analytics </li>
+				<li>Call Tracking</li>
+				<li>Marketing Materials</li>
+			</ul>
 
 			<div className="cta">
-			<ul>
-			<li><Link to="/signup?package=verified">CHOOSE</Link></li>
-			</ul>
-			<span className="trial">&nbsp;</span>
+				<ul>
+					<li><Link to="/signup?package=verified">CHOOSE</Link></li>
+				</ul>
+				<span className="trial">&nbsp;</span>
 			</div>
 			</div><div className="grid_column claimed">
 			<div className="ribbon-wrapper">
@@ -268,7 +270,8 @@ export default class Homepage extends Component {
 
 			<div className="title">Claimed</div>
 			<span className="price"><span>$</span>0</span><span className="term" data-cents=""> /mo</span>
-			<ul className="details">										<li><strong>Local</strong> Exposure</li>
+			<ul className="details">
+				<li><strong>Local</strong> Exposure</li>
 			<li><strong>Standard</strong> Map Icon</li>
 			<li><strong>Limited</strong> Menu &amp; Products</li>
 

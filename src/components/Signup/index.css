@@ -242,7 +242,13 @@
   .navigation{
     margin-top: 50px;
   }
+  .step_five .package_overview{
+    background-image: none!important;
+    background: #f8f9fb;
+  }
 }
+
+
 .joinPage_form input[type=checkbox]{
   margin-right: 5px;
 }
